@@ -1,0 +1,48 @@
+{
+  "name": "www.mitsunee.com",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "prepare": "simple-git-hooks",
+    "format": "prettier -w .",
+    "lint": "eslint .",
+    "dev": "node devServer.js",
+    "build": "vite build && vite build --ssr",
+    "preview": "vite preview"
+  },
+  "nano-staged": {
+    "**/*.{js,jsx}": [
+      "eslint",
+      "prettier -w"
+    ],
+    "**/*.{css,json,md}": [
+      "prettier -w"
+    ]
+  },
+  "simple-git-hooks": {
+    "pre-commit": "yarn nano-staged"
+  },
+  "dependencies": {
+    "@preact/preset-vite": "^2.1.5",
+    "classcat": "^5.0.3",
+    "compression": "^1.7.4",
+    "express": "^4.18.1",
+    "preact": "^10.5.15",
+    "preact-render-to-string": "^5.2.0",
+    "vite": "^2.9.9",
+    "vite-plugin-ssr": "^0.3.64"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.10",
+    "eslint": "^8.15.0",
+    "eslint-config-foxkit": "^1.1.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-hooks": "^4.5.0",
+    "nano-staged": "^0.8.0",
+    "prettier": "^2.6.2",
+    "simple-git-hooks": "^2.7.0"
+  }
+}
