@@ -9,7 +9,8 @@
     "lint": "eslint .",
     "dev": "node devServer.js",
     "build": "vite build && vite build --ssr",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "update:browserslist": "browserslist --update-db"
   },
   "nano-staged": {
     "**/*.{js,jsx}": [
@@ -42,6 +43,8 @@
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "^4.5.0",
     "nano-staged": "^0.8.0",
+    "postcss": "^8.4.13",
+    "postcss-preset-env": "^7.5.0",
     "prettier": "^2.6.2",
     "simple-git-hooks": "^2.7.0"
   }
