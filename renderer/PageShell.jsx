@@ -39,7 +39,7 @@ const Content = function ({ children }) {
       style={{
         padding: 20,
         paddingBottom: 50,
-        borderLeft: "2px solid #eee",
+        borderLeft: "2px solid var(--dark)",
         minHeight: "100vh"
       }}>
       {children}

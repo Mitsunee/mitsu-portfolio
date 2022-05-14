@@ -1,6 +1,16 @@
 /* This CSS is common to all pages */
 
+:root {
+  --dark: #1c1e21;
+  --grey: #363230;
+  --primary: #fbeff0;
+  --accent: #ffbb5c;
+  --hover: #e05281;
+}
+
 body {
+  background-color: var(--grey);
+  color: var(--primary);
   margin: 0;
   font-family: sans-serif;
 }
@@ -9,11 +19,15 @@ body {
 }
 a {
   text-decoration: none;
+  color: var(--primary);
+  &:hover {
+    color: var(--hover);
+  }
 }
 
 .navitem {
   padding: 3px 10px;
-}
-.navitem.is-active {
-  background-color: #eee;
+  &.is-active {
+    background-color: var(--dark);
+  }
 }
