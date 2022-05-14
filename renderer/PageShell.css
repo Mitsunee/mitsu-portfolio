@@ -6,13 +6,15 @@
   --primary: #fbeff0;
   --accent: #ffbb5c;
   --hover: #e05281;
+  --font-sans: "Atkinson Hyperlegible";
+  --font-title: "Lexend";
 }
 
 body {
   background-color: var(--grey);
   color: var(--primary);
   margin: 0;
-  font-family: sans-serif;
+  font-family: var(--font-sans), sans-serif;
 }
 * {
   box-sizing: border-box;
@@ -26,8 +28,22 @@ a {
 }
 
 .navitem {
+  font-family: var(--font-title);
+  font-weight: 700;
   padding: 3px 10px;
   &.is-active {
     background-color: var(--dark);
   }
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-title);
+  font-weight: 700;
+}
+
+button,
+input {
+  font-family: inherit;
 }
