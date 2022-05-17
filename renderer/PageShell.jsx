@@ -8,7 +8,7 @@ const Layout = function ({ children }) {
     <div
       style={{
         display: "flex",
-        maxWidth: 900,
+        maxWidth: "min(90vw, 1200px)",
         margin: "auto"
       }}>
       {children}
@@ -40,7 +40,8 @@ const Content = function ({ children }) {
         padding: 20,
         paddingBottom: 50,
         borderLeft: "2px solid var(--dark)",
-        minHeight: "100vh"
+        minHeight: "100vh",
+        width: "100%"
       }}>
       {children}
     </div>

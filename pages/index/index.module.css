@@ -1,0 +1,9 @@
+.pkmn {
+  background-image: url(../../assets/bgpkmn.jpg);
+  background-size: cover;
+  background-position: bottom center;
+  color: var(--dark);
+  & h1 {
+    text-shadow: 1px 1px 1.5px var(--dark);
+  }
+}
