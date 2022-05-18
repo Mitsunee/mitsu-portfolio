@@ -15,3 +15,9 @@ export function Page({ is404 }) {
     </>
   );
 }
+
+export const documentProps = {
+  title: "Error",
+  description: "An Error has occurred",
+  noRobots: true
+};

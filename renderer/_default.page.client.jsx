@@ -1,6 +1,7 @@
 import { hydrate, render } from "preact";
 import { useClientRouter } from "vite-plugin-ssr/client/router";
 import { PageShell } from "./PageShell";
+import { metaDefaults } from "./meta";
 
 function onTransitionStart() {
   console.log("Page transition start");
@@ -18,7 +19,7 @@ function getPageTitle(pageContext) {
     (pageContext.pageExports.documentProps || {}).title ||
     // For dynamic tiles (defined in the `export addContextProps()` of the page's `.page.server.js`)
     (pageContext.documentProps || {}).title ||
-    "Demo";
+    metaDefaults.title;
   return title;
 }
 
