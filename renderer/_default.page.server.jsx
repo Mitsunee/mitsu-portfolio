@@ -1,7 +1,6 @@
 import renderToString from "preact-render-to-string";
 import { PageShell } from "./PageShell";
 import { escapeInject, dangerouslySkipEscape } from "vite-plugin-ssr";
-import logoUrl from "./logo.svg";
 
 // See https://vite-plugin-ssr.com/data-fetching
 export const passToClient = ["pageProps", "documentProps"];
@@ -25,7 +24,10 @@ export async function render(pageContext) {
     <html lang="en">
       <head>
         <meta charset="UTF-8" />
-        <link rel="icon" href="${logoUrl}" />
+        <link rel="icon" href="/favicon.ico" sizes="any"/>
+        <link rel="icon" href="/assets/icons/icon.svg" type="image/svg+xml"/>
+        <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png"/>
+        <link rel="manifest" href="/manifest.webmanifest"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="${desc}" />
         <title>${title}</title>

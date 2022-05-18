@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import { PageContextProvider } from "./usePageContext";
 import "./PageShell.css";
 import { Link } from "./Link";
@@ -56,7 +55,7 @@ function Logo() {
         marginBottom: 10
       }}>
       <a href="/">
-        <img src={logo} height={64} width={64} alt="logo" />
+        <img src="/assets/icons/icon.svg" height={64} width={64} alt="logo" />
       </a>
     </div>
   );
