@@ -1,6 +1,0 @@
-#about {
-  & h1,
-  & p {
-    color: var(--accent);
-  }
-}

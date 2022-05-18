@@ -70,9 +70,6 @@ export const PageShell = function ({ children, pageContext }) {
           <Link className="navitem" href="/">
             Home
           </Link>
-          <Link className="navitem" href="/about">
-            About
-          </Link>
         </Sidebar>
         <Content>{children}</Content>
       </Layout>
