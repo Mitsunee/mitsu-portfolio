@@ -1,0 +1,38 @@
+#socials {
+  height: 50px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  background-color: var(--dark);
+}
+
+.item {
+  position: relative;
+  width: 32px;
+  height: 32px;
+
+  &:before {
+    display: block;
+    background-color: #1c1e2188;
+    position: absolute;
+    inset: 2px;
+    z-index: 1;
+    content: "";
+  }
+
+  & .inner {
+    position: absolute;
+    inset: 4px;
+    z-index: 2;
+    mask-image: var(--bg);
+    mask-size: cover;
+    background-color: var(--primary);
+    transition: background-color var(--speed) ease-out;
+  }
+
+  &:hover .inner {
+    background-color: var(--hover);
+  }
+}

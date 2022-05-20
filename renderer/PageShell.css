@@ -3,11 +3,14 @@
 :root {
   --dark: #1c1e21;
   --grey: #363230;
+  --highlight: #373a43;
   --primary: #fbeff0;
   --accent: #ffbb5c;
   --hover: #e05281;
   --font-sans: "Atkinson Hyperlegible";
   --font-title: "Lexend";
+  --speed: 250ms;
+  --ease: ease-out;
 }
 
 body {
@@ -22,6 +25,7 @@ body {
 a {
   text-decoration: none;
   color: var(--primary);
+  transition: color var(--speed) var(--ease);
   &:hover {
     color: var(--hover);
   }
