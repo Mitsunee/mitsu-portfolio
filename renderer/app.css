@@ -1,0 +1,99 @@
+/* This CSS is common to all pages */
+
+:root {
+  --dark: #1c1e21;
+  --grey: #363230;
+  --highlight: #373a43;
+  --primary: #fbeff0;
+  --accent: #ffbb5c;
+  --hover: #e05281;
+  --font-sans: "Atkinson Hyperlegible";
+  --font-title: "Lexend";
+  --speed: 250ms;
+  --ease: ease-out;
+  --bar-height: 64px;
+  --content-width: min(90vw, 1200px);
+}
+
+html,
+body {
+  min-height: 100vh;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--grey);
+  color: var(--primary);
+  font-family: var(--font-sans), sans-serif;
+}
+
+body > header {
+  background-color: var(--dark);
+  width: 100%;
+  height: var(--bar-height);
+  display: flex;
+  align-items: center;
+  padding: 0px 16px;
+
+  & a {
+    display: block;
+    width: 48px;
+    height: 48px;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
+body > main {
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  min-height: calc(100vh - var(--bar-height));
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary);
+  transition: color var(--speed) var(--ease);
+  &:hover {
+    color: var(--hover);
+  }
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-title);
+  font-weight: 700;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+.content-wrapper {
+  width: 100%;
+  max-width: var(--content-width);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.headline {
+  width: max-content;
+  max-width: 100%;
+  background-color: var(--dark);
+  margin: 0.5em 0px;
+  padding: 0.25em 0.75em;
+}

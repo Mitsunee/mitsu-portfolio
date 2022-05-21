@@ -1,17 +1,29 @@
-import { Counter } from "./Counter";
-import { ProjectsGrid, ProjectsGridItem } from "./ProjectsGrid";
-import { SocialsBar, SocialsBarItem } from "./SocialsBar";
-import styles from "./index.module.css";
 import githubIconUrl from "iconoir/icons/github.svg";
 import twitterIconUrl from "iconoir/icons/twitter.svg";
 import youtubeIconUrl from "iconoir/icons/youtube.svg";
 import discordIconUrl from "iconoir/icons/discord.svg";
 import webIconUrl from "iconoir/icons/internet.svg";
 import devIconUrl from "iconoir/icons/code-brackets-square.svg";
+import { Headline } from "../../renderer/Headline";
+import { Section } from "../../renderer/Section";
+import { Counter } from "./Counter";
+import { ProjectsGrid, ProjectsGridItem } from "./ProjectsGrid";
+import { SocialsBar, SocialsBarItem } from "./SocialsBar";
+import styles from "./index.module.css";
 
 export function Page() {
   return (
     <>
+      <Section>
+        <Headline>Welcome</Headline>
+        This page is:
+        <ul>
+          <li>Rendered to HTML.</li>
+          <li>
+            Interactive. <Counter />
+          </li>
+        </ul>
+      </Section>
       <SocialsBar>
         <SocialsBarItem
           src={githubIconUrl}
@@ -37,14 +49,6 @@ export function Page() {
           href="https://discord.gg/ZncPkjw"
         />
       </SocialsBar>
-      <h1>Welcome</h1>
-      This page is:
-      <ul>
-        <li>Rendered to HTML.</li>
-        <li>
-          Interactive. <Counter />
-        </li>
-      </ul>
       <ProjectsGrid>
         <ProjectsGridItem
           title="FGO Timers"

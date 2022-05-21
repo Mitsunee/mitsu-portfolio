@@ -1,18 +1,20 @@
-export function Page({ is404 }) {
-  if (is404) {
-    return (
-      <>
-        <h1>404 Page Not Found</h1>
-        <p>This page could not be found.</p>
-      </>
-    );
-  }
+import { Headline } from "./Headline";
 
+export function Page({ is404 }) {
   return (
-    <>
-      <h1>500 Internal Server Error</h1>
-      <p>Something went wrong.</p>
-    </>
+    <section className="content-wrapper">
+      {is404 ? (
+        <>
+          <Headline>404 Page Not Found</Headline>
+          <p>This page could not be found.</p>
+        </>
+      ) : (
+        <>
+          <Headline>500 Internal Server Error</Headline>
+          <p>Something went wrong.</p>
+        </>
+      )}
+    </section>
   );
 }
 

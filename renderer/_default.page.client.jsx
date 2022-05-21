@@ -5,12 +5,12 @@ import { metaDefaults } from "./meta";
 
 function onTransitionStart() {
   console.log("Page transition start");
-  document.querySelector("#page-content").classList.add("page-transition");
+  document.querySelector("#content").classList.add("page-transition");
 }
 
 function onTransitionEnd() {
   console.log("Page transition end");
-  document.querySelector("#page-content").classList.remove("page-transition");
+  document.querySelector("#content").classList.remove("page-transition");
 }
 
 function getPageTitle(pageContext) {

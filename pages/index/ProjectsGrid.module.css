@@ -4,7 +4,8 @@
   place-content: center space-around;
   gap: 1.5rem;
   width: 100%;
-  margin: 1rem;
+  max-width: var(--content-width);
+  margin: 1rem auto;
 }
 
 .item {
