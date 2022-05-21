@@ -6,6 +6,8 @@ import githubIconUrl from "iconoir/icons/github.svg";
 import twitterIconUrl from "iconoir/icons/twitter.svg";
 import youtubeIconUrl from "iconoir/icons/youtube.svg";
 import discordIconUrl from "iconoir/icons/discord.svg";
+import webIconUrl from "iconoir/icons/internet.svg";
+import devIconUrl from "iconoir/icons/code-brackets-square.svg";
 
 export function Page() {
   return (
@@ -46,6 +48,7 @@ export function Page() {
       <ProjectsGrid>
         <ProjectsGridItem
           title="FGO Timers"
+          titleIcon={webIconUrl}
           href="https://fgo.mitsunee.com"
           style={{
             backgroundImage: "radial-gradient(ellipse at top, #2e627a, #2e2c6a)"
@@ -54,6 +57,7 @@ export function Page() {
         </ProjectsGridItem>
         <ProjectsGridItem
           title="Modern Diacritics"
+          titleIcon={devIconUrl}
           href="https://www.npmjs.com/package/modern-diacritics"
           style={{
             backgroundImage: "linear-gradient(90deg, #1b7626, #cf43b7)"
@@ -66,6 +70,7 @@ export function Page() {
         </ProjectsGridItem>
         <ProjectsGridItem
           title="Pokemon Gen3 Damage Calculator"
+          titleIcon={webIconUrl}
           href="https://www.mitsunee.com/gen3dmgcalc"
           className={styles.pkmn}>
           Damage calculator for the &quot;Generation 3&quot; Pokemon games for

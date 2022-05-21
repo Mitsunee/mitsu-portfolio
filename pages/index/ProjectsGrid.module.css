@@ -17,6 +17,9 @@
   & > h1 {
     margin-top: 0px;
     & > a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25ch;
       text-decoration: none;
     }
   }
@@ -27,4 +30,16 @@
     }
     text-decoration: underline;
   }
+}
+
+.icon {
+  display: inline-block;
+  color: inherit;
+  background-color: var(--accent); /* fallback */
+  background-color: currentColor;
+  min-width: 0.8em; /* needs to be min because of inline-flex */
+  height: 0.8em;
+  mask-image: var(--bg);
+  mask-size: cover;
+  transition: background-color var(--speed) ease-out;
 }

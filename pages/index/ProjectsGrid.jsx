@@ -8,13 +8,25 @@ export function ProjectsGrid({ children }) {
 export function ProjectsGridItem({
   children,
   title,
+  titleIcon,
   href,
   style = {},
   className
 }) {
   return (
     <div className={cc([className, styles.item])} style={style}>
-      <h1>{href ? <a href={href}>{title}</a> : title}</h1>
+      <h1>
+        <a href={href}>
+          {titleIcon && (
+            <span
+              className={styles.icon}
+              style={{ "--bg": `url("${titleIcon}")` }}
+              title={title}
+            />
+          )}
+          {title}
+        </a>
+      </h1>
       {children}
     </div>
   );
