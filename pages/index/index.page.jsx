@@ -5,6 +5,7 @@ import styles from "./index.module.css";
 import githubIconUrl from "iconoir/icons/github.svg";
 import twitterIconUrl from "iconoir/icons/twitter.svg";
 import youtubeIconUrl from "iconoir/icons/youtube.svg";
+import discordIconUrl from "iconoir/icons/discord.svg";
 
 export function Page() {
   return (
@@ -26,6 +27,12 @@ export function Page() {
           hover="red"
           title="YouTube"
           href="https://www.youtube.com/channel/UC0Yut3Dj47oaVMTlL_NM6IA"
+        />
+        <SocialsBarItem
+          src={discordIconUrl}
+          hover="#5865F2"
+          title="Discord Server"
+          href="https://discord.gg/ZncPkjw"
         />
       </SocialsBar>
       <h1>Welcome</h1>
