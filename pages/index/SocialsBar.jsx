@@ -4,7 +4,7 @@ export function SocialsBar({ children }) {
   return <div id={styles.socials}>{children}</div>;
 }
 
-export function SocialsBarItem({ src, hover = false }) {
+export function SocialsBarItem({ src, href, title, hover = false }) {
   const style = {
     "--bg": `url("${src}")`
   };
@@ -12,8 +12,8 @@ export function SocialsBarItem({ src, hover = false }) {
   if (hover) style["--hover"] = hover;
 
   return (
-    <div className={styles.item} style={style}>
+    <a href={href} title={title} className={styles.item} style={style}>
       <div className={styles.inner}></div>
-    </div>
+    </a>
   );
 }

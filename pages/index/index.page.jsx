@@ -2,17 +2,31 @@ import { Counter } from "./Counter";
 import { ProjectsGrid, ProjectsGridItem } from "./ProjectsGrid";
 import { SocialsBar, SocialsBarItem } from "./SocialsBar";
 import styles from "./index.module.css";
-import githubIconUrl from "../../assets/icons/social_github.svg";
-import twitterIconUrl from "../../assets/icons/social_twitter.svg";
-import youtubeIconUrl from "../../assets/icons/social_youtube.svg";
+import githubIconUrl from "iconoir/icons/github.svg";
+import twitterIconUrl from "iconoir/icons/twitter.svg";
+import youtubeIconUrl from "iconoir/icons/youtube.svg";
 
 export function Page() {
   return (
     <>
       <SocialsBar>
-        <SocialsBarItem src={githubIconUrl} />
-        <SocialsBarItem src={twitterIconUrl} hover="#1DA1F2" />
-        <SocialsBarItem src={youtubeIconUrl} hover="red" />
+        <SocialsBarItem
+          src={githubIconUrl}
+          title="Github"
+          href="https://github.com/Mitsunee"
+        />
+        <SocialsBarItem
+          src={twitterIconUrl}
+          hover="#1DA1F2"
+          title="Twitter"
+          href="https://twitter.com/Mitsunee"
+        />
+        <SocialsBarItem
+          src={youtubeIconUrl}
+          hover="red"
+          title="YouTube"
+          href="https://www.youtube.com/channel/UC0Yut3Dj47oaVMTlL_NM6IA"
+        />
       </SocialsBar>
       <h1>Welcome</h1>
       This page is:

@@ -1,7 +1,8 @@
 #socials {
-  height: 50px;
+  width: 100%;
+  height: 64px;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   align-items: center;
   justify-content: center;
   gap: 16px;
@@ -9,22 +10,24 @@
 }
 
 .item {
+  display: block;
   position: relative;
-  width: 32px;
-  height: 32px;
+  width: 48px;
+  height: 48px;
 
   &:before {
     display: block;
-    background-color: #1c1e2188;
+    background-color: #373a4388;
     position: absolute;
     inset: 2px;
     z-index: 1;
+    border-radius: 3px;
     content: "";
   }
 
   & .inner {
     position: absolute;
-    inset: 4px;
+    inset: 8px;
     z-index: 2;
     mask-image: var(--bg);
     mask-size: cover;

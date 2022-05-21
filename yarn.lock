@@ -1502,6 +1502,11 @@ http-errors@2.0.0:
     statuses "2.0.1"
     toidentifier "1.0.1"
 
+iconoir@^4.9.1:
+  version "4.9.1"
+  resolved "https://registry.yarnpkg.com/iconoir/-/iconoir-4.9.1.tgz#1181874374f4e47ad557f8d5ed46afb394541d67"
+  integrity sha512-Iz/3MwDF9ce3rIvGzTt9c/H6swTNtNp+HTorH4U8FHtsa2yykhO7e8Th+igQqLW4ioalGNCaAoO1ZGQvYeX7wg==
+
 iconv-lite@0.4.24:
   version "0.4.24"
   resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.24.tgz#2022b4b25fbddc21d2f524974a474aafe733908b"
