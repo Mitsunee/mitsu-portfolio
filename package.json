@@ -8,7 +8,7 @@
     "format": "prettier -w .",
     "lint": "eslint .",
     "dev": "node devServer.js",
-    "build": "vite build && vite build --ssr",
+    "build": "vite build && vite build --ssr && vite-plugin-ssr prerender",
     "preview": "vite preview",
     "update:browserslist": "browserslist --update-db"
   },
