@@ -4,6 +4,7 @@ import youtubeIconUrl from "iconoir/icons/youtube.svg";
 import discordIconUrl from "iconoir/icons/discord.svg";
 import webIconUrl from "iconoir/icons/internet.svg";
 import devIconUrl from "iconoir/icons/code-brackets-square.svg";
+import steamIconUrl from "../../assets/icons/steam.svg";
 //import { Headline } from "../../renderer/Headline";
 import { Section } from "../../renderer/Section";
 import { ProjectsGrid, ProjectsGridItem } from "./ProjectsGrid";
@@ -48,7 +49,11 @@ export function Page() {
           title="Discord Server"
           href="https://discord.gg/ZncPkjw"
         />
-        {/* TODO: add steam and potentially more? */}
+        <SocialsBarItem
+          src={steamIconUrl}
+          title="Steam"
+          href="https://steamcommunity.com/id/mitsunee/"
+        />
       </SocialsBar>
       <ProjectsGrid>
         <ProjectsGridItem
