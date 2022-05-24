@@ -21,7 +21,7 @@ export function ProjectsGridItem({
   className
 }) {
   return (
-    <div className={cc([className, styles.item])} style={style}>
+    <article className={cc([className, styles.item])} style={style}>
       <h1>
         <a href={href}>
           {titleIcon && (
@@ -35,6 +35,6 @@ export function ProjectsGridItem({
         </a>
       </h1>
       {children}
-    </div>
+    </article>
   );
 }

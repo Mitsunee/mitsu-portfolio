@@ -5,10 +5,16 @@ import discordIconUrl from "iconoir/icons/discord.svg";
 import webIconUrl from "iconoir/icons/internet.svg";
 import devIconUrl from "iconoir/icons/code-brackets-square.svg";
 import steamIconUrl from "../../assets/icons/steam.svg";
+import nierImageUrl from "../../assets/favorites/nier-automata.jpg";
+import suzukaImageUrl from "../../assets/favorites/suzuka.jpg";
+import morsImageUrl from "../../assets/favorites/mors.jpg";
+import belakorImageUrl from "../../assets/favorites/belakor.jpg";
+import tmglImageUrl from "../../assets/favorites/tmgl.png";
 //import { Headline } from "../../renderer/Headline";
 import { Section } from "../../renderer/Section";
-import { ProjectsGrid, ProjectsGridItem } from "./ProjectsGrid";
 import { SocialsBar, SocialsBarItem } from "./SocialsBar";
+import { ProjectsGrid, ProjectsGridItem } from "./ProjectsGrid";
+import { FavoritesGrid, FavoritesGridItem } from "./FavoritesGrid";
 import styles from "./index.module.css";
 
 export function Page() {
@@ -83,6 +89,36 @@ export function Page() {
           GBA and Gamecube.
         </ProjectsGridItem>
       </ProjectsGrid>
+      <FavoritesGrid>
+        <FavoritesGridItem
+          type="Game"
+          src={nierImageUrl}
+          name="NieR Automata"
+          from="Square Enix"
+        />
+        <FavoritesGridItem
+          type="Character"
+          src={suzukaImageUrl}
+          name="Suzuka Gozen"
+          from="Fate/Grand Order"
+        />
+        <FavoritesGridItem
+          type="Esport"
+          src={tmglImageUrl}
+          name="Trackmania Grand League"
+          from="Ubisoft Nadeo"
+        />
+        <FavoritesGridItem
+          type="Metal Band"
+          src={morsImageUrl}
+          name="Mors Principium Est"
+        />
+        <FavoritesGridItem
+          type="Metal Band"
+          src={belakorImageUrl}
+          name="Be'lakor"
+        />
+      </FavoritesGrid>
     </>
   );
 }

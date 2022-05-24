@@ -11,6 +11,7 @@
   --font-title: "Lexend";
   --speed: 250ms;
   --ease: ease-out;
+  --hover-scale: 1.075;
   --bar-height: 4rem;
   --icon-size: 3rem;
   --content-width: min(90vw, 1200px);
@@ -79,6 +80,10 @@ h2,
 h3 {
   font-family: var(--font-title);
   font-weight: 700;
+}
+
+h1 {
+  font-size: 1.5em;
 }
 
 button,
