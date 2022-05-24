@@ -1,20 +1,21 @@
 #socials {
   width: 100%;
   min-height: var(--bar-height);
-  padding: 8px var(--bar-height);
+  padding: 1rem var(--bar-height);
+  margin: 1rem 0px;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
   justify-content: center;
-  gap: 8px 16px;
+  gap: 0.5rem 1rem;
   background-color: var(--dark);
 }
 
 .item {
   display: block;
   position: relative;
-  width: 48px;
-  height: 48px;
+  width: var(--icon-size);
+  height: var(--icon-size);
 
   &:before {
     display: block;

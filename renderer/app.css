@@ -11,7 +11,8 @@
   --font-title: "Lexend";
   --speed: 250ms;
   --ease: ease-out;
-  --bar-height: 64px;
+  --bar-height: 4rem;
+  --icon-size: 3rem;
   --content-width: min(90vw, 1200px);
 }
 
@@ -35,12 +36,12 @@ body > header {
   height: var(--bar-height);
   display: flex;
   align-items: center;
-  padding: 0px 16px;
+  padding: 0px 1rem;
 
   & a {
     display: block;
-    width: 48px;
-    height: 48px;
+    width: var(--icon-size);
+    height: var(--icon-size);
 
     & img {
       width: 100%;
@@ -51,9 +52,11 @@ body > header {
 }
 
 body > main {
+  display: flex;
+  flex-flow: column nowrap;
   margin: auto;
-  padding-top: 20px;
-  padding-bottom: 50px;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
   min-height: calc(100vh - var(--bar-height));
   width: 100%;
 }
@@ -86,14 +89,13 @@ input {
 .content-wrapper {
   width: 100%;
   max-width: var(--content-width);
-  margin-right: auto;
-  margin-left: auto;
+  margin: 1rem auto;
 }
 
 .headline {
   width: max-content;
   max-width: 100%;
   background-color: var(--dark);
-  margin: 0.5em 0px;
-  padding: 0.25em 0.75em;
+  margin: 0.5rem 0px;
+  padding: 0.25rem 0.75rem;
 }
