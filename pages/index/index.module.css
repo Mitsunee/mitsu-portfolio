@@ -12,6 +12,26 @@
   }
 }
 
+.fgo {
+  background-color: #2e627a;
+  background-image: radial-gradient(ellipse at top, #2e2c6a, transparent),
+    radial-gradient(ellipse at bottom, #680c5f, transparent);
+}
+
+.mdrn {
+  background-image: radial-gradient(
+      ellipse at 3% -1%,
+      #4a5950 41%,
+      rgba(255, 255, 255, 0) 83%
+    ),
+    radial-gradient(
+      circle at -93% -118%,
+      #642114 78%,
+      rgba(255, 255, 255, 0) 95%
+    ),
+    radial-gradient(ellipse at 3% 52%, rgba(255, 255, 255, 0) 0%, #0d0e1a 54%);
+}
+
 .pkmn {
   background-image: url(../../assets/bgpkmn.jpg);
   background-size: cover;

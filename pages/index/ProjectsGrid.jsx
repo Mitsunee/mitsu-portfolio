@@ -1,8 +1,15 @@
 import cc from "classcat";
 import styles from "./ProjectsGrid.module.css";
+import { Section } from "../../renderer/Section";
+import { Headline } from "../../renderer/Headline";
 
 export function ProjectsGrid({ children }) {
-  return <section id={styles.grid}>{children}</section>;
+  return (
+    <Section>
+      <Headline>My Projects</Headline>
+      <div id={styles.grid}>{children}</div>
+    </Section>
+  );
 }
 
 export function ProjectsGridItem({

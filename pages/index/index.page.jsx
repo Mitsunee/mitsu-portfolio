@@ -55,18 +55,14 @@ export function Page() {
           title="FGO Timers"
           titleIcon={webIconUrl}
           href="https://fgo.mitsunee.com"
-          style={{
-            backgroundImage: "radial-gradient(ellipse at top, #2e627a, #2e2c6a)"
-          }}>
+          className={styles.fgo}>
           Event timers and game information for Fate/Grand Order.
         </ProjectsGridItem>
         <ProjectsGridItem
           title="Modern Diacritics"
           titleIcon={devIconUrl}
           href="https://www.npmjs.com/package/modern-diacritics"
-          style={{
-            backgroundImage: "linear-gradient(90deg, #1b7626, #cf43b7)"
-          }}>
+          className={styles.mdrn}>
           A modern way to latinize/ascii-fold strings and normalize symbols.
           Available on{" "}
           <a href="https://www.npmjs.com/package/modern-diacritics">npm</a> and
