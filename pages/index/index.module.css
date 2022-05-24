@@ -1,3 +1,17 @@
+.logo {
+  display: block;
+  width: 600px;
+  min-width: min(600px, 40vw);
+  max-width: 80vw;
+  height: auto;
+  margin: auto;
+
+  & + p {
+    text-align: center;
+    font-size: 1.2em;
+  }
+}
+
 .pkmn {
   background-image: url(../../assets/bgpkmn.jpg);
   background-size: cover;

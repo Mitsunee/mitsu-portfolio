@@ -4,9 +4,8 @@ import youtubeIconUrl from "iconoir/icons/youtube.svg";
 import discordIconUrl from "iconoir/icons/discord.svg";
 import webIconUrl from "iconoir/icons/internet.svg";
 import devIconUrl from "iconoir/icons/code-brackets-square.svg";
-import { Headline } from "../../renderer/Headline";
+//import { Headline } from "../../renderer/Headline";
 import { Section } from "../../renderer/Section";
-import { Counter } from "./Counter";
 import { ProjectsGrid, ProjectsGridItem } from "./ProjectsGrid";
 import { SocialsBar, SocialsBarItem } from "./SocialsBar";
 import styles from "./index.module.css";
@@ -15,14 +14,15 @@ export function Page() {
   return (
     <>
       <Section>
-        <Headline>Welcome</Headline>
-        This page is:
-        <ul>
-          <li>Rendered to HTML.</li>
-          <li>
-            Interactive. <Counter />
-          </li>
-        </ul>
+        <img
+          src="../../assets/logo.svg"
+          alt="Mitsunee"
+          className={styles.logo}
+        />
+        <p>
+          Freelance Web Developer | Open Source Developer and Contributor |
+          Sometimes Translation Volunteer
+        </p>
       </Section>
       <SocialsBar>
         <SocialsBarItem
@@ -48,6 +48,7 @@ export function Page() {
           title="Discord Server"
           href="https://discord.gg/ZncPkjw"
         />
+        {/* TODO: add steam and potentially more? */}
       </SocialsBar>
       <ProjectsGrid>
         <ProjectsGridItem

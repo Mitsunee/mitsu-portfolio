@@ -1,4 +1,5 @@
 export const metaDefaults = {
   title: "Mitsunee",
-  description: "PLACEHOLDER" // PLACEHOLDER
+  description:
+    "Freelance Web Developer | Open Source Developer and Contributor | Sometimes Translation Volunteer"
 };
