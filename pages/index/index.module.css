@@ -41,3 +41,13 @@
     text-shadow: 1px 1px 1.5px var(--dark);
   }
 }
+
+#cta {
+  text-align: center;
+  padding: 0 min(5%, 2rem);
+
+  & a {
+    background: var(--highlight);
+    padding: 0.25em 0.25ch;
+  }
+}
