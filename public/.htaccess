@@ -2,6 +2,7 @@ RewriteEngine on
 ErrorDocument 404 /404.html
 
 # FGO Site Legacy
+RewriteRule ^fgo/assets/(.*)$ fgo-exp-ce/assets/$1
 RewriteRule ^fgo-time/?$ https://fgo.mitsunee.com/ [R=302,L]
 RewriteRule ^fgo/upgrades/?$ https://fgo.mitsunee.com/upgrades/ [R=302,L]
 RewriteRule ^fgo/ap/?$ https://fgo.mitsunee.com/ap-calc/ [R=302,L]
