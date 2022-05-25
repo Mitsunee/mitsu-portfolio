@@ -1,0 +1,3 @@
+user-agent:*
+Disallow: /assets/renderer/
+Disallow: /404.html
