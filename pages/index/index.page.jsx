@@ -2,6 +2,7 @@ import githubIconUrl from "iconoir/icons/github.svg";
 import twitterIconUrl from "iconoir/icons/twitter.svg";
 import youtubeIconUrl from "iconoir/icons/youtube.svg";
 import discordIconUrl from "iconoir/icons/discord.svg";
+import logoUrl from "../../assets/logo.svg";
 import webIconUrl from "iconoir/icons/internet.svg";
 import devIconUrl from "iconoir/icons/code-brackets-square.svg";
 import steamIconUrl from "../../assets/icons/steam.svg";
@@ -22,11 +23,7 @@ export function Page() {
   return (
     <>
       <Section>
-        <img
-          src="../../assets/logo.svg"
-          alt="Mitsunee"
-          className={styles.logo}
-        />
+        <img src={logoUrl} alt="Mitsunee" className={styles.logo} />
         <p>
           Freelance Web Developer | Open Source Developer and Contributor |
           Sometimes Translation Volunteer
