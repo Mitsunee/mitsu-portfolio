@@ -1,8 +1,9 @@
+import { Section } from "./Section";
 import { Headline } from "./Headline";
 
 export function Page({ is404 }) {
   return (
-    <section className="content-wrapper">
+    <Section>
       {is404 ? (
         <>
           <Headline>404 Page Not Found</Headline>
@@ -14,7 +15,7 @@ export function Page({ is404 }) {
           <p>Something went wrong.</p>
         </>
       )}
-    </section>
+    </Section>
   );
 }
 
