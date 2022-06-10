@@ -32,6 +32,19 @@
     radial-gradient(ellipse at 3% 52%, rgba(255, 255, 255, 0) 0%, #0d0e1a 54%);
 }
 
+.fxkt {
+  background-color: #222;
+  background-image: linear-gradient(to top, #141414d9, transparent),
+    linear-gradient(45deg, #141414ff 25%, transparent 25%),
+    linear-gradient(-45deg, #141414ff 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #141414ff 75%),
+    linear-gradient(-45deg, transparent 75%, #141414ff 75%),
+    radial-gradient(ellipse at top, #232323d9, transparent);
+  background-size: 100% 100vh, 48px 48px, 48px 48px, 48px 48px, 48px 48px,
+    100% 100vh;
+  background-position: 0 0, 0 0, 0 24px, 24px -24px, -24px 0px, 0 0;
+}
+
 .pkmn {
   background-image: url(../../assets/bgpkmn.jpg);
   background-size: cover;
@@ -40,6 +53,15 @@
   & h1 {
     text-shadow: 1px 1px 1.5px var(--dark);
   }
+}
+
+.pcapi {
+  background-color: #001220;
+  background-image: radial-gradient(
+    ellipse at 30% 130%,
+    #771515cc 20%,
+    transparent 66%
+  );
 }
 
 #cta {
