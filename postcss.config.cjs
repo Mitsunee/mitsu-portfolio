@@ -7,7 +7,9 @@ module.exports = {
       stage: 2,
       features: {
         "custom-properties": false,
-        "custom-media-queries": true,
+        "custom-media-queries": {
+          importFrom: "renderer/media.css"
+        },
         "nesting-rules": true
       }
     }
