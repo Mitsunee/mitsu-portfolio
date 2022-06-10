@@ -74,6 +74,15 @@ export function Page() {
             development. I have also been working as a freelancer in frontend
             development since early 2021.
           </p>
+          <h2>Technology I use</h2>
+          <ul className={styles.taglist}>
+            <li>HTML5 / CSS3 / Javascript (ES2021) / TypeScript</li>
+            <li>React/Next.js (Fullstack apps)</li>
+            <li>Preact/Vite (Static Sites)</li>
+            <li>PostCSS</li>
+            <li>Github Actions</li>
+            <li>Linux (Ubuntu, CentOS)</li>
+          </ul>
           <div id={styles.cta}>
             Want to know my skills in more detail? There's a full list of tech I
             have learned or am currently learning on{" "}
