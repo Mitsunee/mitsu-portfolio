@@ -1,10 +1,11 @@
 name: mitsuwww
 type: php
-docroot: ""
+docroot: "dist/client"
 php_version: "8.1"
 webserver_type: nginx-fpm
 router_http_port: "80"
 router_https_port: "443"
+host_webserver_port: "3000"
 xdebug_enabled: false
 additional_hostnames: []
 additional_fqdns: []

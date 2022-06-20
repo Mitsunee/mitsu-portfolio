@@ -1,1 +1,4 @@
 dist
+composer.lock
+vendor
+.ddev/.ddev-docker-compose*
