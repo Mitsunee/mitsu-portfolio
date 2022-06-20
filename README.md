@@ -1,7 +1,7 @@
 # Mitsunee
 
 <p align="center">
-  <img src="https://github.com/Mitsunee/mitsunee/raw/main/assets/logo.svg" alt="Mitsunee" width="480px">
+  <img src="https://github.com/Mitsunee/mitsuwww/raw/main/assets/logo.svg" alt="Mitsunee" width="480px">
 </p>
 
 Repository for https://www.mitsunee.com
