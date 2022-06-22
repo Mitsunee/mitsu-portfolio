@@ -8,10 +8,8 @@
     "format": "prettier -w .",
     "lint": "eslint .",
     "dev": "node devServer.js",
-    "build": "vite build && vite build --ssr && vite-plugin-ssr prerender",
-    "prepreview": "ddev composer install",
-    "preview": "ddev start",
-    "update:browserslist": "browserslist --update-db"
+    "build": "vite build && vite build --ssr",
+    "postbuild": "vite-plugin-ssr prerender && node postBuild.js"
   },
   "nano-staged": {
     "**/*.{js,jsx}": [
@@ -26,13 +24,19 @@
     "pre-commit": "yarn nano-staged"
   },
   "dependencies": {
+    "@foxkit/node-util": "^0.3.0",
     "@preact/preset-vite": "^2.1.5",
+    "cheerio": "^1.0.0-rc.11",
     "classcat": "^5.0.3",
     "compression": "^1.7.4",
     "express": "^4.18.1",
+    "globby": "^13.1.2",
     "iconoir": "^4.9.1",
     "preact": "^10.5.15",
     "preact-render-to-string": "^5.2.0",
+    "rehype": "^12.0.1",
+    "rehype-external-links": "^1.0.1",
+    "rehype-preset-minify": "^6.0.0",
     "vite": "^2.9.9",
     "vite-plugin-ssr": "^0.3.64"
   },

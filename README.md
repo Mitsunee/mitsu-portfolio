@@ -27,23 +27,34 @@ There are git hooks in place to lint and format all staged files prior to commit
 
 _(Requirements: [Node.js], [Yarn 1.x], Docker, [ddev])_
 
-Build the frontend and start ddev using the provided preview script:
+Build the frontend and install the backend dependencies, then start the preview server:
 
 ```shell
 yarn
 yarn build
-
-yarn preview
-# or
-ddev composer install && ddev start
+ddev composer install
+ddev start
 ```
 
 The preview should now be available to you as https://mitsuwww.ddev.site
 
+## Production build
+
+_(Requirements: [Node.js], [Yarn 1.x], Docker, [ddev])_
+
+Delete or move the `vendor` directory if you have one for backend development. Then build the frontend and install production backend dependencies:
+
+```shell
+yarn
+yarn build
+ddev composer install --no-dev -o
+```
+
+You can now deploy the `dist` and `vendor` directories. Frontend dependencies are bundled.
+
 ## Todo
 
 - Add `.env` instructions
-- Postbuild script
 - actually do backend stuff :)
 
 [vite]: https://vitejs.dev/
