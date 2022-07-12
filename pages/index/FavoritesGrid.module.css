@@ -1,11 +1,19 @@
 #favorites {
   display: grid;
   width: 100%;
-  grid-template-columns: repeat(auto-fill, minmax(25%, 250px));
+  grid-template-columns: minmax(250px, 90%);
   grid-auto-rows: auto;
   justify-content: space-around;
   gap: 1.5rem;
   margin: 1rem;
+
+  @media (--mq-medium) {
+    grid-template-columns: repeat(2, minmax(250px, 40%));
+  }
+
+  @media (--mq-large) {
+    grid-template-columns: repeat(3, minmax(250px, 25%));
+  }
 }
 
 .item {
