@@ -106,6 +106,14 @@ export function Page() {
             Event timers and game information for Fate/Grand Order.
           </ProjectsGridItem>
           <ProjectsGridItem
+            title="Mitsunee | Blog"
+            titleIcon={webIconUrl}
+            href="https://blog.mitsunee.com/"
+            className={styles.blog}>
+            My personal blog where I post guides and rants about my hobbies,
+            Linux, tech, coding and games.
+          </ProjectsGridItem>
+          <ProjectsGridItem
             title="Modern Diacritics"
             titleIcon={devIconUrl}
             href="https://www.npmjs.com/package/modern-diacritics"
@@ -117,15 +125,6 @@ export function Page() {
             <a href="https://github.com/Mitsunee/modern-diacritics">Github</a>.
           </ProjectsGridItem>
           <ProjectsGridItem
-            title="Foxkit"
-            titleIcon={devIconUrl}
-            href="https://github.com/mitsunee/foxkit"
-            className={styles.fxkt}>
-            Collection of Configs and modules to reduce copypasting between my
-            projects as well as providing known good versions of common modules
-            (like sorting algorithms and parsing data files)
-          </ProjectsGridItem>
-          <ProjectsGridItem
             title="Pokemon Gen3 Damage Calculator"
             titleIcon={webIconUrl}
             href="https://www.mitsunee.com/gen3dmgcalc"
@@ -134,14 +133,13 @@ export function Page() {
             GBA and Gamecube.
           </ProjectsGridItem>
           <ProjectsGridItem
-            title="Picoapi (WIP)"
+            title="Foxkit"
             titleIcon={devIconUrl}
-            href="https://www.npmjs.com/package/picoapi"
-            className={styles.pcapi}>
-            Simple fetch-based REST Client with Proxy-object based API.
-            Available on <a href="https://www.npmjs.com/package/picoapi">npm</a>{" "}
-            and opensource on{" "}
-            <a href="https://github.com/Mitsunee/picoapi">Github</a>.
+            href="https://github.com/mitsunee/foxkit"
+            className={styles.fxkt}>
+            Collection of Configs and modules to reduce copypasting between my
+            projects as well as providing known good versions of common modules
+            (like sorting algorithms and parsing data files)
           </ProjectsGridItem>
         </ProjectsGrid>
       </Columns>

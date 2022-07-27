@@ -80,14 +80,23 @@
   }
 }
 
-.pcapi {
+.blog {
+  background-color: var(--dark);
+  background-image: radial-gradient(
+    ellipse at top,
+    var(--highlight),
+    transparent 75%
+  );
+}
+
+/*.pcapi {
   background-color: #001220;
   background-image: radial-gradient(
     ellipse at 30% 130%,
     #771515cc 20%,
     transparent 66%
   );
-}
+}*/
 
 #cta {
   font-size: 1.1em;
