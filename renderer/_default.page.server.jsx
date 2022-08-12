@@ -28,23 +28,29 @@ export async function render(pageContext) {
         <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.webmanifest"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="${desc}" />
         ${
           documentProps?.noRobots
             ? escapeInject`<meta name="robots" content="noindex" />\n        `
             : ""
-        }<title>${title}</title>
-        <meta name="application-name" content="Mitsunee" />
+        }<meta name="application-name" content="Mitsunee" />
+        <meta property="og:site_name" content="Mitsunee" />
+
+        <title>${title}</title>
         <meta property="og:title" content="${title}" />
+        <meta name="twitter:title" content="${title}" />
+
+        <meta name="description" content="${desc}" />
         <meta property="og:description" content="${desc}" />
-        <meta property="og:image" content="/assets/icons/icon-192.png" />
+        <meta name="twitter:description" content="${desc}" />
+
+        <meta property="og:image" content="https://www.mitsunee.com/assets/icons/icon-192.png" />
+        <meta name="twitter:image" content="https://www.mitsunee.com/assets/icons/icon-192.png" />
+
         <meta name="twitter:author" content="@Mitsunee"/>
+        <meta name="theme-color" content="#ffbb5c" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&family=Lexend:wght@700&display=swap"
-          rel="stylesheet"
-        />
+        <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&family=Lexend:wght@700&display=swap" rel="stylesheet"/>
       </head>
       <body>
         ${dangerouslySkipEscape(pageHtml)}
