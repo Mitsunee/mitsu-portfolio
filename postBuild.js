@@ -16,7 +16,7 @@ import rehypeLinks from "rehype-external-links";
 const reHypeProcessor = rehype()
   .use(rehypeMinify)
   .data("settings", { quote: '"', upperDoctype: true, preferUnquoted: false })
-  .use(rehypeLinks, { target: false, rel: ["noopener", "noreferrer"] });
+  .use(rehypeLinks, { rel: ["noopener", "noreferrer"] });
 
 async function processHtml(filePath) {
   const rawContent = await readFile(filePath);
