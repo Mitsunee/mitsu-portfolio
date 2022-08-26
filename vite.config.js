@@ -4,5 +4,5 @@ import ssr from "vite-plugin-ssr/plugin";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [preact(), ssr()]
+  plugins: [preact(), ssr({ prerender: true })]
 });

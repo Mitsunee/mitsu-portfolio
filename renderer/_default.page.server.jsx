@@ -15,7 +15,7 @@ export async function render(pageContext) {
   );
 
   // See https://vite-plugin-ssr.com/head
-  const { documentProps } = pageContext.pageExports;
+  const { documentProps } = pageContext.exports;
   const title = documentProps?.title || metaDefaults.title;
   const desc = documentProps?.description || metaDefaults.description;
 
