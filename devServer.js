@@ -1,6 +1,6 @@
 import express from "express";
 import compression from "compression";
-import { createPageRenderer } from "vite-plugin-ssr";
+import { renderPage } from "vite-plugin-ssr";
 
 const isProduction = process.env.NODE_ENV === "production";
 const root = process.cwd();
@@ -17,16 +17,15 @@ const root = process.cwd();
     const vite = await import("vite");
     viteDevServer = await vite.createServer({
       root,
-      server: { middlewareMode: "ssr" }
+      server: { middlewareMode: true }
     });
     app.use(viteDevServer.middlewares);
   }
 
-  const renderPage = createPageRenderer({ viteDevServer, isProduction, root });
   app.get("*", async (req, res, next) => {
     const url = req.originalUrl;
     const pageContextInit = {
-      url
+      urlOriginal: url
     };
     const pageContext = await renderPage(pageContextInit);
     const { httpResponse } = pageContext;
