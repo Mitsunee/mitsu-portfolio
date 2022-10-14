@@ -20,6 +20,10 @@ import { FavoritesGrid, FavoritesGridItem } from "./FavoritesGrid";
 import { Email } from "./Email";
 import styles from "./index.module.css";
 
+export const documentProps = {
+  canonicalPath: "/"
+};
+
 export function Page() {
   return (
     <>

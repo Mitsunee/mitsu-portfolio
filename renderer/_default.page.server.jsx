@@ -19,6 +19,7 @@ export async function render(pageContext) {
   const title = documentProps?.title || metaDefaults.title;
   const desc = documentProps?.description || metaDefaults.description;
 
+  // prettier-ignore
   const documentHtml = escapeInject`<!DOCTYPE html>
     <html lang="en">
       <head>
@@ -28,12 +29,17 @@ export async function render(pageContext) {
         <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.webmanifest"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="application-name" content="Mitsunee" />
+        <meta property="og:site_name" content="Mitsunee" />
         ${
           documentProps?.noRobots
             ? escapeInject`<meta name="robots" content="noindex" />\n        `
             : ""
-        }<meta name="application-name" content="Mitsunee" />
-        <meta property="og:site_name" content="Mitsunee" />
+        }${
+          documentProps?.canonicalPath
+            ? escapeInject`<link rel="canonical" href="https://www.mitsunee.com${documentProps.canonicalPath}" />\n        `
+            : ""
+        }
 
         <title>${title}</title>
         <meta property="og:title" content="${title}" />
@@ -59,8 +65,6 @@ export async function render(pageContext) {
 
   return {
     documentHtml,
-    pageContext: {
-      // We can add some `pageContext` here, which is useful if we want to do page redirection https://vite-plugin-ssr.com/page-redirection
-    }
+    pageContext: {}
   };
 }
