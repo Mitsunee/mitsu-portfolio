@@ -3,6 +3,8 @@ import npmIconUrl from "iconoir/icons/npm.svg";
 import twitterIconUrl from "iconoir/icons/twitter.svg";
 import youtubeIconUrl from "iconoir/icons/youtube.svg";
 import discordIconUrl from "iconoir/icons/discord.svg";
+// TEMP: waiting for iconoir to have a proper mastodon icon
+import mastodonIconUrl from "iconoir/icons/chat-bubble-check.svg";
 import logoUrl from "../../assets/logo.svg";
 import webIconUrl from "iconoir/icons/internet.svg";
 import devIconUrl from "iconoir/icons/code-brackets-square.svg";
@@ -44,6 +46,13 @@ export function Page() {
           src={npmIconUrl}
           title="npm"
           href="https://www.npmjs.com/~mitsunee"
+        />
+        <SocialsBarItem
+          src={mastodonIconUrl}
+          hover="#6364FF"
+          title="Mastodon"
+          href="https://ieji.de/@mitsunee"
+          rel="me"
         />
         <SocialsBarItem
           src={twitterIconUrl}
