@@ -11,12 +11,10 @@ import { globby } from "globby";
 import { rm, rename } from "fs/promises";
 import { rehype } from "rehype";
 import rehypeMinify from "rehype-preset-minify";
-import rehypeLinks from "rehype-external-links";
 
-const reHypeProcessor = rehype()
+const minify = rehype()
   .use(rehypeMinify)
-  .data("settings", { quote: '"', upperDoctype: true, preferUnquoted: false })
-  .use(rehypeLinks, { rel: ["noopener", "noreferrer"] });
+  .data("settings", { quote: '"', upperDoctype: true, preferUnquoted: false });
 
 async function processHtml(filePath) {
   const rawContent = await readFile(filePath);
@@ -24,7 +22,8 @@ async function processHtml(filePath) {
   // process
   const $ = load(rawContent);
   $("link[rel='preload'][href$='.svg']").remove();
-  const { value } = await reHypeProcessor.process($.html());
+  $("a[target]").attr("rel", "noopener noreferrer");
+  const { value } = await minify.process($.html());
 
   // write
   await writeFile(filePath, value);
