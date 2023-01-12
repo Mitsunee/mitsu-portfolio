@@ -1,5 +1,5 @@
 {
-  "name": "www.mitsunee.com",
+  "name": "mitsuwww",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,9 +7,9 @@
     "prepare": "simple-git-hooks",
     "format": "prettier -w .",
     "lint": "eslint .",
-    "dev": "node devServer.js",
-    "build": "vite build",
-    "postbuild": "node postBuild.js"
+    "dev": "astro dev",
+    "build": "astro build",
+    "postbuild": "node src/scripts/postBuild.js"
   },
   "nano-staged": {
     "**/*.{js,jsx}": [
@@ -24,21 +24,18 @@
     "pre-commit": "yarn nano-staged"
   },
   "dependencies": {
-    "@babel/core": "^7.19.0",
+    "@astrojs/preact": "^1.2.0",
+    "@fontsource/atkinson-hyperlegible": "^4.5.11",
+    "@fontsource/lexend": "^4.5.14",
     "@foxkit/node-util": "^0.4.0",
-    "@preact/preset-vite": "^2.4.0",
+    "astro": "^1.9.2",
     "cheerio": "^1.0.0-rc.12",
     "classcat": "^5.0.4",
-    "compression": "^1.7.4",
-    "express": "^4.18.1",
     "globby": "^13.1.2",
     "iconoir": "^5.3.0",
-    "preact": "^10.10.6",
-    "preact-render-to-string": "^5.2.3",
+    "preact": "^10.6.5",
     "rehype": "^12.0.1",
-    "rehype-preset-minify": "^6.0.0",
-    "vite": "^3.1.0",
-    "vite-plugin-ssr": "^0.4.32"
+    "rehype-preset-minify": "^6.0.0"
   },
   "devDependencies": {
     "eslint": "^8.23.0",

@@ -31,6 +31,9 @@ async function processHtml(filePath) {
 }
 
 (async function main() {
+  log.warn("Script has not been migrating yet");
+  process.exit(0);
+
   if (!(await dirExists("./dist"))) {
     die("No build found. Please run 'yarn build'");
   }

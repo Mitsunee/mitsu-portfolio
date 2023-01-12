@@ -3,3 +3,4 @@ dist
 vendor
 vendor.bak
 .env
+.env.*
