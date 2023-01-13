@@ -1,7 +1,7 @@
 import cc from "classcat";
+import { Section } from "~/components/Section";
+import { Headline } from "~/components/Headline";
 import styles from "./ProjectsGrid.module.css";
-import { Section } from "../../renderer/Section";
-import { Headline } from "../../renderer/Headline";
 
 export function ProjectsGrid({ children }) {
   return (

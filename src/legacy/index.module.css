@@ -71,7 +71,7 @@
 }
 
 .pkmn {
-  background-image: url(../../assets/bgpkmn.jpg);
+  background-image: url("/assets/bgpkmn.jpg");
   background-size: cover;
   background-position: bottom center;
   color: var(--dark);

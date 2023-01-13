@@ -2,12 +2,10 @@
 import Document from "./Document.astro";
 import type { PageMeta } from "~/types/meta";
 
-interface Props extends PageMeta {}
-
-const { title, description, noRobots } = Astro.props;
+type Props = PageMeta;
 ---
 
-<Document title={title} description={description} noRobots={noRobots}>
+<Document {...Astro.props}>
   <header>
     <a href="/" title="Mitsunee">
       <img src="/assets/icons/icon.svg" alt="Mitsunee" />
@@ -16,8 +14,8 @@ const { title, description, noRobots } = Astro.props;
   <main id="content"><slot /></main>
 </Document>
 
-<style>
-  header {
+<style is:global>
+  body > header {
     background-color: var(--dark);
     width: 100%;
     height: var(--bar-height);
@@ -38,7 +36,7 @@ const { title, description, noRobots } = Astro.props;
     }
   }
 
-  main {
+  body > main {
     display: flex;
     flex-flow: column nowrap;
     margin: auto;

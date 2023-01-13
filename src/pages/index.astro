@@ -1,13 +1,12 @@
 ---
-import Hero from "~/components/Hero.astro";
-import Page from "~/layouts/Page.astro";
+import PageWithHero from "~/layouts/PageWithHero.astro";
+import { Page } from "~/legacy/index.page";
 
 const title = "Mitsunee";
 const description =
   "Freelance Web Developer | Open Source Developer and Contributor | Sometimes Translation Volunteer";
 ---
 
-<Page title={title} description={description}>
-  <Hero />
-  <h1>PLACEHOLDER</h1>
-</Page>
+<PageWithHero title={title} description={description}>
+  <Page client:load />
+</PageWithHero>
