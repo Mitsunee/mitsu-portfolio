@@ -26,25 +26,22 @@
     "@fontsource/lexend": "^4.5.14",
     "@foxkit/node-util": "^0.4.0",
     "astro": "^1.9.2",
-    "cheerio": "^1.0.0-rc.12",
     "classcat": "^5.0.4",
-    "globby": "^13.1.2",
-    "iconoir": "^5.3.0",
+    "eslint": "^8.31.0",
+    "eslint-config-foxkit": "^2.0.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-react": "^7.32.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "iconoir": "^6.0.0",
+    "postcss": "^8.4.16",
+    "postcss-preset-env": "^7.8.3",
     "preact": "^10.6.5",
-    "rehype": "^12.0.1",
-    "rehype-preset-minify": "^6.0.0"
+    "typescript": "^4.9.4"
   },
   "devDependencies": {
-    "eslint": "^8.23.0",
-    "eslint-config-foxkit": "^1.1.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-jsx-a11y": "^6.6.1",
-    "eslint-plugin-react": "^7.31.8",
-    "eslint-plugin-react-hooks": "^4.6.0",
     "nano-staged": "^0.8.0",
-    "postcss": "^8.4.16",
-    "postcss-preset-env": "^7.8.1",
-    "prettier": "^2.7.1",
-    "simple-git-hooks": "^2.8.0"
+    "prettier": "^2.8.2",
+    "simple-git-hooks": "^2.8.1"
   }
 }
