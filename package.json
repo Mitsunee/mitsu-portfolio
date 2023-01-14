@@ -25,6 +25,7 @@
     "@fontsource/atkinson-hyperlegible": "^4.5.11",
     "@fontsource/lexend": "^4.5.14",
     "@foxkit/node-util": "^0.4.0",
+    "@types/node": "^18.11.18",
     "astro": "^1.9.2",
     "classcat": "^5.0.4",
     "eslint": "^8.31.0",
