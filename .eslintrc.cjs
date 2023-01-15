@@ -5,6 +5,13 @@ module.exports = {
     "foxkit",
     "foxkit/preact",
     "foxkit/ts",
+    "plugin:astro/recommended",
     "prettier"
-  ]
+  ],
+  rules: {
+    "react/jsx-filename-extension": [
+      "error",
+      { extensions: [".jsx", ".tsx", ".astro"] }
+    ]
+  }
 };

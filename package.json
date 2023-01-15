@@ -30,9 +30,10 @@
     "@typescript-eslint/parser": "^5.48.1",
     "astro": "^1.9.2",
     "classcat": "^5.0.4",
-    "eslint": "^8.31.0",
+    "eslint": "^8.32.0",
     "eslint-config-foxkit": "^2.0.0",
     "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-astro": "^0.21.1",
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react": "^7.32.0",
     "eslint-plugin-react-hooks": "^4.6.0",
@@ -44,7 +45,7 @@
   },
   "devDependencies": {
     "nano-staged": "^0.8.0",
-    "prettier": "^2.8.2",
+    "prettier": "^2.8.3",
     "simple-git-hooks": "^2.8.1"
   }
 }
