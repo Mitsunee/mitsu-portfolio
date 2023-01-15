@@ -13,7 +13,7 @@
     "build": "astro build"
   },
   "nano-staged": {
-    "**/*.{js,jsx,ts,tsx,css,astro,json,md}": [
+    "**/*.{js,jsx,ts,tsx,css,astro,json,md,yml}": [
       "prettier -w"
     ]
   },
