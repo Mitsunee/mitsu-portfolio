@@ -1,14 +1,14 @@
 # Mitsunee
 
 <p align="center">
-  <img src="https://github.com/Mitsunee/mitsuwww/raw/main/assets/logo.svg" alt="Mitsunee" width="480px">
+  <img src="https://github.com/Mitsunee/mitsuwww/raw/main/src/assets/logo.svg" alt="Mitsunee" width="480px">
 </p>
 
 Repository for https://www.mitsunee.com
 
 ## Development Setup
 
-This project uses [Vite] with [vite-plugin-ssr] for the frontend and PHP for backend services.
+This project uses [Astro] with [Preact] for the frontend and [PHP] for backend services (TBD).
 
 ### Frontend
 
@@ -21,7 +21,7 @@ yarn
 yarn dev
 ```
 
-There are git hooks in place to lint and format all staged files prior to committing. You can also run `yarn lint` or `yarn format` to run those checks across the entire project.
+There are git hooks in place to format all staged files prior to committing. Please run `yarn lint` prior to committing if your editor does not integrate ESLint. Github Actions will check formatting, lint and check types on each push.
 
 ### Backend
 
@@ -42,7 +42,7 @@ The preview should now be available to you as https://mitsuwww.ddev.site
 
 _(Requirements: [Node.js], [Yarn 1.x], Docker, [ddev])_
 
-Delete or move the `vendor` directory if you have one for backend development. Then build the frontend and install production backend dependencies:
+Delete or move the `vendor` directory if you have one for backend development (`vendor.bak` is in `.gitignore`). Then build the frontend and install production backend dependencies:
 
 ```shell
 yarn
@@ -57,8 +57,9 @@ You can now deploy the `dist` and `vendor` directories. Frontend dependencies ar
 - Add `.env` instructions
 - actually do backend stuff :)
 
-[vite]: https://vitejs.dev/
-[vite-plugin-ssr]: https://vite-plugin-ssr.com/
+[astro]: https://docs.astro.build/en/getting-started/
+[preact]: https://preactjs.com/guide/v10/getting-started
+[php]: https://www.php.net
 [ddev]: https://ddev.readthedocs.io/en/latest/
 [node.js]: https://nodejs.org/en/
 [yarn 1.x]: https://classic.yarnpkg.com/lang/en/
