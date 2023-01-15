@@ -1,15 +1,25 @@
 import cc from "classcat";
+import type { JSX } from "preact/jsx-runtime";
+import { Section } from "~/components/Section";
+import { Headline } from "~/components/Headline";
+import type { CC, WithChildren } from "~/types/HTMLProps";
 import styles from "./FavoritesGrid.module.css";
-import { Section } from "../../renderer/Section";
-import { Headline } from "../../renderer/Headline";
 
-export function FavoritesGrid({ children }) {
+export function FavoritesGrid({ children }: WithChildren) {
   return (
     <Section>
       <Headline>Favorites</Headline>
       <div id={styles.favorites}>{children}</div>
     </Section>
   );
+}
+
+interface FavoritesGridItemProps extends CC {
+  src: string;
+  name: string;
+  from?: string;
+  type: string;
+  style?: JSX.CSSProperties;
 }
 
 export function FavoritesGridItem({
@@ -19,7 +29,7 @@ export function FavoritesGridItem({
   type,
   className,
   style = {}
-}) {
+}: FavoritesGridItemProps) {
   return (
     <article className={cc([className, styles.item])} style={style}>
       <h1>{name}</h1>

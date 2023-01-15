@@ -1,8 +1,8 @@
 import { useState } from "preact/hooks";
 
 export function Email() {
-  const [mail, setMail] = useState(false);
-  const reveal = str => {
+  const [mail, setMail] = useState<string | false>(false);
+  const reveal = (str: string) => {
     setMail(
       str
         .split("")

@@ -1,15 +1,24 @@
 import cc from "classcat";
+import type { JSX } from "preact/jsx-runtime";
+import { Section } from "~/components/Section";
+import { Headline } from "~/components/Headline";
+import type { CC, WithChildren } from "~/types/HTMLProps";
 import styles from "./ProjectsGrid.module.css";
-import { Section } from "../../renderer/Section";
-import { Headline } from "../../renderer/Headline";
 
-export function ProjectsGrid({ children }) {
+export function ProjectsGrid({ children }: WithChildren) {
   return (
     <Section>
       <Headline>My Projects</Headline>
       <div id={styles.grid}>{children}</div>
     </Section>
   );
+}
+
+interface ProjectsGridItemProps extends CC, WithChildren {
+  title: string;
+  titleIcon?: string;
+  href: string;
+  style?: JSX.CSSProperties;
 }
 
 export function ProjectsGridItem({
@@ -19,7 +28,7 @@ export function ProjectsGridItem({
   href,
   style = {},
   className
-}) {
+}: ProjectsGridItemProps) {
   return (
     <article className={cc([className, styles.item])} style={style}>
       <h1>

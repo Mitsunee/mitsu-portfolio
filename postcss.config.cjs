@@ -8,7 +8,7 @@ module.exports = {
       features: {
         "custom-properties": false,
         "custom-media-queries": {
-          importFrom: "renderer/media.css"
+          importFrom: "src/styles/media.css"
         },
         "nesting-rules": true
       }

@@ -1,0 +1,65 @@
+---
+import githubIconUrl from "iconoir/icons/github.svg";
+import npmIconUrl from "iconoir/icons/npm.svg";
+import twitterIconUrl from "iconoir/icons/twitter.svg";
+import youtubeIconUrl from "iconoir/icons/youtube.svg";
+import discordIconUrl from "iconoir/icons/discord.svg";
+// PLACEHOLDER: waiting for iconoir to have a proper mastodon icon
+import mastodonIconUrl from "iconoir/icons/chat-bubble-check.svg";
+
+import Page from "./Page.astro";
+import Hero from "~/components/Hero.astro";
+import SocialsBar from "~/components/SocialsBar.astro";
+import SocialsBarItem from "~/components/SocialsBarItem.astro";
+import steamIconUrl from "~/assets/icons/steam.svg";
+import type { PageMeta } from "~/types/meta";
+
+type Props = PageMeta;
+---
+
+<Page {...Astro.props}>
+  <Hero />
+  <SocialsBar>
+    <SocialsBarItem
+      src={githubIconUrl}
+      title="Github"
+      href="https://github.com/Mitsunee"
+    />
+    <SocialsBarItem
+      src={npmIconUrl}
+      title="npm"
+      href="https://www.npmjs.com/~mitsunee"
+    />
+    <SocialsBarItem
+      src={mastodonIconUrl}
+      hover="#6364FF"
+      title="Mastodon"
+      href="https://ieji.de/@mitsunee"
+      rel="me"
+    />
+    <SocialsBarItem
+      src={twitterIconUrl}
+      hover="#1DA1F2"
+      title="Twitter"
+      href="https://twitter.com/Mitsunee"
+    />
+    <SocialsBarItem
+      src={youtubeIconUrl}
+      hover="red"
+      title="YouTube"
+      href="https://www.youtube.com/channel/UC0Yut3Dj47oaVMTlL_NM6IA"
+    />
+    <SocialsBarItem
+      src={discordIconUrl}
+      hover="#5865F2"
+      title="Discord Server"
+      href="https://discord.gg/ZncPkjw"
+    />
+    <SocialsBarItem
+      src={steamIconUrl}
+      title="Steam"
+      href="https://steamcommunity.com/id/mitsunee/"
+    />
+  </SocialsBar>
+  <slot />
+</Page>

@@ -1,0 +1,28 @@
+---
+import { Section } from "./Section";
+import logoUrl from "~/assets/logo.svg";
+---
+
+<Section>
+  <img src={logoUrl} alt="Mitsunee" />
+  <p>
+    Freelance Web Developer | Open Source Developer and Contributor | Sometimes
+    Translation Volunteer
+  </p>
+</Section>
+
+<style>
+  img {
+    display: block;
+    width: 600px;
+    min-width: min(600px, 40vw);
+    max-width: 80vw;
+    height: auto;
+    margin: auto;
+
+    & + p {
+      text-align: center;
+      font-size: 1.2em;
+    }
+  }
+</style>
