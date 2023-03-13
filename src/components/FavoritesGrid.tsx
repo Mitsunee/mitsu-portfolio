@@ -33,7 +33,7 @@ export function FavoritesGridItem({
   return (
     <article className={cc([className, styles.item])} style={style}>
       <h1>{name}</h1>
-      <img src={src} alt={name} title={name} />
+      <img src={src} alt={name} title={name} loading="lazy" />
       {from && <h2>{from}</h2>}
       <h3>{type}</h3>
     </article>
