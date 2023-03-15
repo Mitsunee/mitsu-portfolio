@@ -1,0 +1,21 @@
+---
+import { Headline } from "~/components/Headline";
+import { Section } from "~/components/Section";
+import Page from "~/layouts/Page.astro";
+
+interface Props {
+  code: number;
+  description: string;
+}
+
+const title = `Error ${Astro.props.code}`;
+---
+
+<Page title={title} description={Astro.props.description} noRobots>
+  <Section>
+    <Headline>{title}</Headline>
+    <p>{Astro.props.description}</p>
+    <p><a href="/">Return to Home page</a></p>
+    <slot />
+  </Section>
+</Page>
