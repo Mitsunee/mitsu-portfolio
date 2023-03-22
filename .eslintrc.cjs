@@ -14,5 +14,6 @@ module.exports = {
       "error",
       { extensions: [".jsx", ".tsx", ".astro"] }
     ]
-  }
+  },
+  ignorePatterns: ["node_modules", "dist"]
 };
