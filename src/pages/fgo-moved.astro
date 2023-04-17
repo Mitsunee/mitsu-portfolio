@@ -1,0 +1,58 @@
+---
+import Page from "~/layouts/Page.astro";
+import { Headline } from "~/components/Headline";
+import { Section } from "~/components/Section";
+---
+
+<Page title="This site has moved" description="" noRobots>
+  <Section>
+    <Headline>FGO Timers has moved</Headline>
+    <p>
+      Since Nov 22, 2021 FGO Timers and most other Fate/Grand Order related
+      pages have moved to a new address: <a
+        href="https://fgo.mitsunee.com"
+        class="highlight">fgo.mitsunee.com</a
+      >. If you see the old url anywhere please inform the admins of that place
+      of this change.
+    </p>
+    <a href="https://fgo.mitsunee.com" class="icon"
+      ><img
+        src="/assets/fgo-timers-big.png"
+        width="256"
+        height="256"
+        loading="lazy"
+        alt="FGO Timers"
+      /></a
+    >
+    <p>
+      The <a href="https://www.mitsunee.com/fgo-exp-ce/"
+        >FGO CE Exp Calculator</a
+      > has not been ported yet and remains available on this domain. <b
+        >This page will be removed</b
+      > when all tools are fully ported over.
+    </p>
+  </Section>
+</Page>
+
+<style is:global>
+  .icon {
+    width: 256px;
+    aspect-ratio: 1;
+    max-width: 80%;
+    margin: auto;
+    display: block;
+
+    & img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 1;
+    }
+  }
+  .highlight {
+    color: var(--accent);
+    &:hover {
+      color: var(--hover);
+    }
+  }
+</style>

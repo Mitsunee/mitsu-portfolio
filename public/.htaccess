@@ -5,7 +5,7 @@ ErrorDocument 400 /error/400/index.html
 
 # FGO Site Legacy
 RewriteRule ^fgo/assets/(.*)$ fgo-exp-ce/assets/$1
-RewriteRule ^fgo-time/?$ https://fgo.mitsunee.com/ [R=302,L]
-RewriteRule ^fgo/upgrades/?$ https://fgo.mitsunee.com/upgrades/ [R=302,L]
-RewriteRule ^fgo/ap/?$ https://fgo.mitsunee.com/ap-calc/ [R=302,L]
-RewriteRule ^fgo/(.*)$ https://fgo.mitsunee.com/ [R=302,L]
+RewriteRule ^fgo-time/?$ /fgo-moved/index.html [L]
+RewriteRule ^fgo/upgrades/?$ /fgo-moved/index.html [L]
+RewriteRule ^fgo/ap/?$ /fgo-moved/index.html [L]
+RewriteRule ^fgo/(.*)$ /fgo-moved/index.html [L]
