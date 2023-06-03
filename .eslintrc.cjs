@@ -5,7 +5,7 @@ module.exports = {
     "plugin:@typescript-eslint/eslint-recommended",
     "foxkit",
     "foxkit/preact",
-    "foxkit/ts",
+    "foxkit/ts-strict",
     "plugin:astro/recommended",
     "prettier"
   ],
@@ -15,5 +15,14 @@ module.exports = {
       { extensions: [".jsx", ".tsx", ".astro"] }
     ]
   },
-  ignorePatterns: ["node_modules", "dist"]
+  ignorePatterns: ["node_modules", "dist"],
+  overrides: [
+    {
+      files: ["**/*.ts?(x)", "**/*.astro"],
+      parserOptions: {
+        project: true,
+        tsconfigRootDir: __dirname
+      }
+    }
+  ]
 };
