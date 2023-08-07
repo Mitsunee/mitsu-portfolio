@@ -2,3 +2,6 @@ user-agent:*
 Disallow: /_astro/
 Disallow: /assets/favorites/
 Disallow: /error/
+
+User-agent: GPTBot
+Disallow: /
