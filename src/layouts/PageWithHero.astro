@@ -1,20 +1,27 @@
 ---
-import githubIconUrl from "iconoir/icons/github.svg";
-import npmIconUrl from "iconoir/icons/npm.svg";
-import twitterIconUrl from "iconoir/icons/twitter.svg";
-import youtubeIconUrl from "iconoir/icons/youtube.svg";
-import discordIconUrl from "iconoir/icons/discord.svg";
+import githubIcon from "iconoir/icons/github.svg";
+import npmIcon from "iconoir/icons/npm.svg";
+import twitterIcon from "iconoir/icons/twitter.svg";
+import youtubeIcon from "iconoir/icons/youtube.svg";
+import discordIcon from "iconoir/icons/discord.svg";
 // PLACEHOLDER: waiting for iconoir to have a proper mastodon icon
-import mastodonIconUrl from "iconoir/icons/chat-bubble-check.svg";
-
-import Page from "./Page.astro";
+import mastodonIcon from "iconoir/icons/chat-bubble-check.svg";
 import Hero from "~/components/Hero.astro";
 import SocialsBar from "~/components/SocialsBar.astro";
 import SocialsBarItem from "~/components/SocialsBarItem.astro";
-import steamIconUrl from "~/assets/icons/steam.svg";
+import steamIcon from "~/assets/icons/steam.svg";
 import type { PageMeta } from "~/types/meta";
+import Page from "./Page.astro";
 
 type Props = PageMeta;
+
+const githubIconUrl = githubIcon.src;
+const npmIconUrl = npmIcon.src;
+const twitterIconUrl = twitterIcon.src;
+const youtubeIconUrl = youtubeIcon.src;
+const discordIconUrl = discordIcon.src;
+const mastodonIconUrl = mastodonIcon.src;
+const steamIconUrl = steamIcon.src;
 ---
 
 <Page {...Astro.props}>

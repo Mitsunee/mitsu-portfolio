@@ -1,13 +1,17 @@
 {
-  "extends": "astro/tsconfigs/strict",
+  "extends": "astro/tsconfigs/base",
   "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "strict": true,
+    "strictNullChecks": true,
     "jsx": "react-jsx",
     "jsxImportSource": "preact",
     "baseUrl": ".",
     "paths": {
-      "~/*": ["src/*"]
-    },
-    "skipLibCheck": true
+      "~/*": ["./src/*"]
+    }
   },
-  "include": ["src/**/*", "src/env.d.ts"]
+  "include": ["src/types.d.ts", "src/env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
 }

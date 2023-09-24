@@ -1,28 +1,38 @@
 module.exports = {
   parserOptions: { sourceType: "module" },
   extends: [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/eslint-recommended",
-    "foxkit",
-    "foxkit/preact",
+    "foxkit/strict",
     "foxkit/ts-strict",
+    "foxkit/preact",
     "plugin:astro/recommended",
     "prettier"
   ],
   rules: {
-    "react/jsx-filename-extension": [
-      "error",
-      { extensions: [".jsx", ".tsx", ".astro"] }
-    ]
+    "react/react-in-jsx-scope": "off"
   },
-  ignorePatterns: ["node_modules", "dist"],
   overrides: [
     {
-      files: ["**/*.ts?(x)", "**/*.astro"],
+      files: ["**/*.ts?(x)"],
+      plugins: ["@typescript-eslint"],
+      parser: "@typescript-eslint/parser",
       parserOptions: {
-        project: true,
+        project: "tsconfig.json",
         tsconfigRootDir: __dirname
       }
+    },
+    {
+      files: ["**/*.astro"],
+      parser: "astro-eslint-parser",
+      parserOptions: {
+        parser: "@typescript-eslint/parser",
+        extraFileExtensions: [".astro"]
+      },
+      rules: {
+        "react/jsx-filename-extension": "off",
+        "react/no-unknown-property": "off",
+        "react/no-unescaped-entities": "off"
+      }
     }
-  ]
+  ],
+  ignorePatterns: ["dist"]
 };

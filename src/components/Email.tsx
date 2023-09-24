@@ -21,13 +21,14 @@ export function Email() {
       </a>
     </>
   ) : (
-    <a
+    <button
+      className="link"
       onClick={ev => {
         ev.preventDefault();
         reveal("upzxyqgf@lgqoph^]%Yda");
       }}
       title="Click to reveal (requires javascript)">
       Email
-    </a>
+    </button>
   );
 }

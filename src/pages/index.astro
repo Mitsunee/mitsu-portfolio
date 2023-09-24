@@ -1,6 +1,6 @@
 ---
-import webIconUrl from "iconoir/icons/internet.svg";
-import devIconUrl from "iconoir/icons/code-brackets-square.svg";
+import webIcon from "iconoir/icons/internet.svg";
+import devIcon from "iconoir/icons/code-brackets-square.svg";
 import PageWithHero from "~/layouts/PageWithHero.astro";
 import { Headline } from "~/components/Headline";
 import { Section, Columns } from "~/components/Section";
@@ -12,6 +12,8 @@ const title = "Mitsunee";
 const description =
   "Freelance Web Developer | Open Source Developer and Contributor | Sometimes Translation Volunteer";
 
+const webIconUrl = webIcon.src;
+const devIconUrl = devIcon.src;
 const nierImageUrl = "/assets/favorites/nier-automata.jpg";
 const suzukaImageUrl = "/assets/favorites/suzuka.jpg";
 const morsImageUrl = "/assets/favorites/mors.jpg";
@@ -53,9 +55,9 @@ const tmglImageUrl = "/assets/favorites/tmgl.png";
           rel="noopener noreferrer">
           Github
         </a>
-        .<br />
+         .<br />
         <br />
-        You can contact my on social media or via <Email client:load />!
+         You can contact my on social media or via <Email client:load />!
       </div>
     </Section>
     <ProjectsGrid>
@@ -82,7 +84,7 @@ const tmglImageUrl = "/assets/favorites/tmgl.png";
         A modern way to latinize/ascii-fold strings and normalize symbols.
         Available on{" "}
         <a href="https://www.npmjs.com/package/modern-diacritics">npm</a>{" "}
-        and opensource on{" "}
+         and opensource on{" "}
         <a href="https://github.com/Mitsunee/modern-diacritics">Github</a>.
       </ProjectsGridItem>
       <ProjectsGridItem
@@ -190,9 +192,20 @@ const tmglImageUrl = "/assets/favorites/tmgl.png";
       linear-gradient(45deg, transparent 75%, #141414ff 75%),
       linear-gradient(-45deg, transparent 75%, #141414ff 75%),
       radial-gradient(ellipse at top, #232323d9, transparent);
-    background-size: 100% 100vh, 48px 48px, 48px 48px, 48px 48px, 48px 48px,
+    background-size:
+      100% 100vh,
+      48px 48px,
+      48px 48px,
+      48px 48px,
+      48px 48px,
       100% 100vh;
-    background-position: 0 0, 0 0, 0 24px, 24px -24px, -24px 0px, 0 0;
+    background-position:
+      0 0,
+      0 0,
+      0 24px,
+      24px -24px,
+      -24px 0px,
+      0 0;
   }
 
   .pkmn {
@@ -221,7 +234,9 @@ const tmglImageUrl = "/assets/favorites/tmgl.png";
     margin: 1.5em 0.8em;
     padding: 2em min(5%, 2rem);
     background-color: var(--dark);
-    box-shadow: 2px 2px 4px var(--dark), inset 1px 1px 4px var(--highlight);
+    box-shadow:
+      2px 2px 4px var(--dark),
+      inset 1px 1px 4px var(--highlight);
     border-radius: 0.5em;
 
     & a {

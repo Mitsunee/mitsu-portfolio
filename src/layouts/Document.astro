@@ -77,13 +77,23 @@ const pageIcon = `${Astro.url.origin}/assets/icons/icon-192.png`;
     line-height: 1.3em;
   }
 
-  a {
+  a,
+  .link {
     text-decoration: underline;
     color: var(--primary);
     transition: color var(--speed) var(--ease);
     &:hover {
       color: var(--hover);
     }
+  }
+
+  :where(button.link) {
+    border: 0px;
+    font-family: inherit;
+    font-size: inherit;
+    background: transparent;
+    padding: 0px;
+    display: inline-block;
   }
 
   h1,
