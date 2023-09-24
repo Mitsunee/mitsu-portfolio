@@ -12,6 +12,12 @@
       "~/*": ["./src/*"]
     }
   },
-  "include": ["src/types.d.ts", "src/env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "src/types.d.ts",
+    "src/env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.astro"
+  ],
   "exclude": ["node_modules"]
 }
