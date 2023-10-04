@@ -1,7 +1,7 @@
 import cc from "classcat";
 import type { JSX } from "preact/jsx-runtime";
-import { Section } from "~/components/Section";
 import { Headline } from "~/components/Headline";
+import { Section } from "~/components/Section";
 import type { CC, WithChildren } from "~/types/HTMLProps";
 import styles from "./ProjectsGrid.module.css";
 
