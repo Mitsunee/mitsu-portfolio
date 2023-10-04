@@ -20,6 +20,9 @@ dependencies:
   '@foxkit/node-util':
     specifier: ^0.6.0
     version: 0.6.0
+  '@nanostores/preact':
+    specifier: ^0.5.0
+    version: 0.5.0(nanostores@0.9.3)(preact@10.18.1)
   '@types/node':
     specifier: ^18.18.3
     version: 18.18.3
@@ -32,6 +35,9 @@ dependencies:
   iconoir:
     specifier: ^6.8.0
     version: 6.11.0
+  nanostores:
+    specifier: ^0.9.3
+    version: 0.9.3
   postcss:
     specifier: ^8.4.31
     version: 8.4.31
@@ -1361,6 +1367,17 @@ packages:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.1
       '@jridgewell/sourcemap-codec': 1.4.15
+    dev: false
+
+  /@nanostores/preact@0.5.0(nanostores@0.9.3)(preact@10.18.1):
+    resolution: {integrity: sha512-Zq5DEAY+kIfwJ1NPd43D1mpsbISuiD6N/SuTHrt/8jUoifLwXaReaZMAnvkvbIGOgcB1Hy++A9jZix2taNNYxQ==}
+    engines: {node: ^16.0.0 || ^18.0.0 || >=20.0.0}
+    peerDependencies:
+      nanostores: ^0.9.0
+      preact: '>=10.0.0'
+    dependencies:
+      nanostores: 0.9.3
+      preact: 10.18.1
     dev: false
 
   /@nodelib/fs.scandir@2.1.5:
@@ -4418,6 +4435,11 @@ packages:
     resolution: {integrity: sha512-BGcqMMJuToF7i1rt+2PWSNVnWIkGCU78jBG3RxO/bZlnZPK2Cmi2QaffxGO/2RvWi9sL+FAiRiXMgsyxQ1DIDA==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
+
+  /nanostores@0.9.3:
+    resolution: {integrity: sha512-KobZjcVyNndNrb5DAjfs0WG0lRcZu5Q1BOrfTOxokFLi25zFrWPjg+joXC6kuDqNfSt9fQwppyjUBkRPtsL+8w==}
+    engines: {node: ^16.0.0 || ^18.0.0 || >=20.0.0}
+    dev: false
 
   /napi-build-utils@1.0.2:
     resolution: {integrity: sha512-ONmRUqK7zj7DWX0D9ADe03wbwOBZxNAfF20PlGfCWQcD3+/MakShIHrMqx9YwPTfxDdF1zLeL+RGZiR9kGMLdg==}
