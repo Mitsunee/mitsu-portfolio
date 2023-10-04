@@ -30,6 +30,22 @@ pnpm format:check
 pnpm typecheck
 ```
 
+<details>
+<summary>Full list of commands</summary>
+
+```shell
+pnpm format # formats entire codebase
+pnpm format:check # checks formatting on entire codebase
+pnpm lint # standard lint check on entire codebase
+pnpm lint:fix # standard lint check on entire codebase with autofix enabled
+pnpm lint:strict # strict lint check on entire codebase
+pnpm dev # start dev server
+pnpm typecheck # run typechecks on entire codebase
+pnpm build # create production build
+```
+
+</details>
+
 ## Production build
 
 Simply run the build script:
