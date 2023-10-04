@@ -14,6 +14,7 @@ Make sure you have [node.js] (version 16 or higher) and [pnpm] (version 8) insta
 
 ```shell
 pnpm install
+./install-sharp.sh
 pnpm dev
 ```
 
