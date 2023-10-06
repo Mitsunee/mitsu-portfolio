@@ -13,6 +13,7 @@
   --header-height: 4rem; /* TODO: based on min(?vmax, 4rem) or something similar? */
   --icon-size: calc(var(--header-height) * 0.75);
   --content-width: min(90vw, 1480px);
+  --radius: 8px;
 }
 
 :root[data-theme="light"] {
@@ -128,4 +129,25 @@ a,
 button,
 input {
   font-family: inherit;
+}
+
+.button {
+  font-size: inherit;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  color: var(--text);
+  padding: 0.5em;
+  transition: border-color var(--ease) var(--speed);
+}
+
+.button:hover,
+.button:focus {
+  color: var(--primary);
+  border-color: currentColor;
+}
+
+.button:active,
+.button.active {
+  color: var(--accent);
 }
