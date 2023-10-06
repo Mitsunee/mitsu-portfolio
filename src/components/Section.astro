@@ -1,0 +1,22 @@
+---
+type Props = {
+  class?: string;
+  background?: boolean;
+};
+---
+
+<section
+  class:list={["section", { bg: Astro.props.background }, Astro.props.class]}>
+  <slot />
+</section>
+
+<style>
+  .section {
+    width: var(--content-width);
+    margin: auto;
+  }
+
+  .section.bg {
+    background-color: var(--secondary);
+  }
+</style>

@@ -10,8 +10,8 @@
   --speed: 250ms;
   --ease: ease-out;
   --hover-scale: 1.075;
-  --bar-height: 4rem; /* TODO: based on min(?vmax, 4rem) or something similar? */
-  --icon-size: 3rem; /* TODO: based on above value? */
+  --header-height: 4rem; /* TODO: based on min(?vmax, 4rem) or something similar? */
+  --icon-size: calc(var(--header-height) * 0.75);
   --content-width: min(90vw, 1480px);
 }
 
