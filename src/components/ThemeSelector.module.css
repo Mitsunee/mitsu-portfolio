@@ -1,6 +1,10 @@
 .wrapper {
   height: var(--icon-size);
-  padding: 6px;
+  padding: 2px;
+
+  @media (--mq-large) {
+    padding: 6px;
+  }
 
   & button {
     height: 100%;

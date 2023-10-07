@@ -7,13 +7,15 @@
   --accent: #ad1f4e;
 
   /** non-themeable **/
+  --shadow: #1004058f;
   --speed: 250ms;
   --ease: ease-out;
   --hover-scale: 1.075;
-  --header-height: 4rem; /* TODO: based on min(?vmax, 4rem) or something similar? */
+  --header-height: 2.5rem; /* TODO: based on min(?vmax, 4rem) or something similar? */
   --icon-size: calc(var(--header-height) * 0.75);
   --content-width: min(90vw, 1480px);
-  --radius: 8px;
+  --radius: 0.5rem;
+  --radius-large: 1rem;
 }
 
 :root[data-theme="light"] {
@@ -137,7 +139,7 @@ input {
   border: 1px solid transparent;
   border-radius: var(--radius);
   color: var(--text);
-  padding: 0.5em;
+  padding: 2px;
   transition: border-color var(--ease) var(--speed);
 }
 
@@ -150,4 +152,22 @@ input {
 .button:active,
 .button.active {
   color: var(--accent);
+}
+
+@media (--mq-small) {
+  :root {
+    --header-height: 3rem;
+  }
+  .button {
+    padding: 0.25em;
+  }
+}
+
+@media (--mq-large) {
+  :root {
+    --header-height: 4rem;
+  }
+  .button {
+    padding: 0.5em;
+  }
 }
