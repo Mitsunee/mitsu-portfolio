@@ -134,6 +134,7 @@ input {
 }
 
 .button {
+  display: inline-flex;
   font-size: inherit;
   background-color: transparent;
   border: 1px solid transparent;
@@ -152,6 +153,12 @@ input {
 .button:active,
 .button.active {
   color: var(--accent);
+}
+
+.button > svg {
+  line-height: unset;
+  height: 100%;
+  width: auto;
 }
 
 @media (--mq-small) {
