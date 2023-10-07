@@ -35,6 +35,9 @@ dependencies:
   iconoir:
     specifier: ^6.8.0
     version: 6.11.0
+  iconoir-react:
+    specifier: ^6.11.0
+    version: 6.11.0(@preact/compat@17.1.2)
   nanostores:
     specifier: ^0.9.3
     version: 0.9.3
@@ -47,6 +50,12 @@ dependencies:
   preact:
     specifier: ^10.18.1
     version: 10.18.1
+  react:
+    specifier: npm:@preact/compat
+    version: /@preact/compat@17.1.2(preact@10.18.1)
+  react-dom:
+    specifier: npm:@preact/compat
+    version: /@preact/compat@17.1.2(preact@10.18.1)
   sharp:
     specifier: ^0.32.6
     version: 0.32.6
@@ -1415,6 +1424,14 @@ packages:
       picocolors: 1.0.0
       tslib: 2.6.2
     dev: true
+
+  /@preact/compat@17.1.2(preact@10.18.1):
+    resolution: {integrity: sha512-7pOZN9lMDDRQ+6aWvjwTp483KR8/zOpfS83wmOo3zfuLKdngS8/5RLbsFWzFZMGdYlotAhX980hJ75bjOHTwWg==}
+    peerDependencies:
+      preact: '*'
+    dependencies:
+      preact: 10.18.1
+    dev: false
 
   /@preact/preset-vite@2.5.0(@babel/core@7.23.0)(preact@10.18.1)(vite@4.4.10):
     resolution: {integrity: sha512-BUhfB2xQ6ex0yPkrT1Z3LbfPzjpJecOZwQ/xJrXGFSZD84+ObyS//41RdEoQCMWsM0t7UHGaujUxUBub7WM1Jw==}
@@ -3589,6 +3606,14 @@ packages:
   /human-signals@5.0.0:
     resolution: {integrity: sha512-AXcZb6vzzrFAUE61HnN4mpLqd/cSIwNQjtNWR0euPm6y0iqx3G4gOXaIDdtdDwZmhwe82LA6+zinmW4UBWVePQ==}
     engines: {node: '>=16.17.0'}
+    dev: false
+
+  /iconoir-react@6.11.0(@preact/compat@17.1.2):
+    resolution: {integrity: sha512-+1RgmEWh/9H0aYR2e8sDL5elDUYnkyOXO0E+RnwhkjhJY36Lge6r/9nv1n1FvDXoeFY48omkPUl8s/ciA0XOAg==}
+    peerDependencies:
+      react: ^16.8.6 || ^17 || ^18
+    dependencies:
+      react: /@preact/compat@17.1.2(preact@10.18.1)
     dev: false
 
   /iconoir@6.11.0:

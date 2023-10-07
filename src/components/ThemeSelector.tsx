@@ -1,8 +1,6 @@
 import { useStore } from "@nanostores/preact";
 import cc from "classcat";
-import moonIcon from "iconoir/icons/half-moon.svg";
-import minusIcon from "iconoir/icons/minus.svg";
-import sunIcon from "iconoir/icons/sun-light.svg";
+import { HalfMoon, Minus, SunLight } from "iconoir-react";
 import { $theme } from "~/stores/theme";
 import styles from "./ThemeSelector.module.css";
 
@@ -16,27 +14,21 @@ export function ThemeSelector() {
         className={cc(["button", currentTheme == "light" && "active"])}
         aria-label="Choose Light Theme"
         onClick={() => $theme.set("light")}>
-        <div
-          className={styles.icon}
-          style={{ "--bg": `url(${sunIcon.src})` }}></div>
+        <SunLight className={styles.icon} />
       </button>
       <button
         type="button"
         className={cc(["button", currentTheme === null && "active"])}
         aria-label="Choose System Theme"
         onClick={() => $theme.set(null)}>
-        <div
-          className={styles.icon}
-          style={{ "--bg": `url(${minusIcon.src})` }}></div>
+        <Minus className={styles.icon} />
       </button>
       <button
         type="button"
         className={cc(["button", currentTheme == "dark" && "active"])}
         aria-label="Choose Dark Theme"
         onClick={() => $theme.set("dark")}>
-        <div
-          className={styles.icon}
-          style={{ "--bg": `url(${moonIcon.src})` }}></div>
+        <HalfMoon className={styles.icon} />
       </button>
     </div>
   );
