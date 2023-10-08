@@ -5,9 +5,9 @@
   --primary: #ffbb5c;
   --secondary: #dad7db;
   --accent: #ad1f4e;
+  --shadow: #10040546;
 
   /** non-themeable **/
-  --shadow: #1004058f;
   --speed: 250ms;
   --ease: ease-out;
   --hover-scale: 1.075;
@@ -24,6 +24,7 @@
   --primary: #ffbb5c;
   --secondary: #dad7db;
   --accent: #ad1f4e;
+  --shadow: #10040546;
 }
 
 :root[data-theme="dark"] {
@@ -32,6 +33,7 @@
   --primary: #ffbb5c;
   --secondary: #272428;
   --accent: #e05281;
+  --shadow: #130c0c8f;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -41,6 +43,7 @@
     --primary: #ffbb5c;
     --secondary: #272428;
     --accent: #e05281;
+    --shadow: #130c0c8f;
   }
 }
 
@@ -141,7 +144,9 @@ input {
   border-radius: var(--radius);
   color: var(--text);
   padding: 2px;
-  transition: border-color var(--ease) var(--speed);
+  transition:
+    border-color var(--ease) var(--speed),
+    color var(--ease) var(--speed);
 }
 
 .button:hover,
@@ -159,6 +164,14 @@ input {
   line-height: unset;
   height: 100%;
   width: auto;
+}
+
+ul {
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0px;
 }
 
 @media (--mq-small) {
