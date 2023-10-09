@@ -6,6 +6,7 @@
   --secondary: #dad7db;
   --accent: #ad1f4e;
   --shadow: #10040546;
+  --black: var(--text);
 
   /** non-themeable **/
   --speed: 250ms;
@@ -25,6 +26,7 @@
   --secondary: #dad7db;
   --accent: #ad1f4e;
   --shadow: #10040546;
+  --black: var(--text);
 }
 
 :root[data-theme="dark"] {
@@ -34,6 +36,7 @@
   --secondary: #272428;
   --accent: #e05281;
   --shadow: #130c0c8f;
+  --black: var(--background);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -44,6 +47,7 @@
     --secondary: #272428;
     --accent: #e05281;
     --shadow: #130c0c8f;
+    --black: var(--background);
   }
 }
 
@@ -71,6 +75,32 @@ html {
 body {
   background-color: var(--background);
   color: var(--text);
+}
+
+::selection {
+  background-color: var(--primary);
+  color: var(--black);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 0.75rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--secondary);
+}
+
+/* For Mozilla-based browsers */
+html {
+  scrollbar-width: auto;
+  scrollbar-color: var(--secondary);
 }
 
 h1,
