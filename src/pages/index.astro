@@ -1,5 +1,10 @@
 ---
-import { Discord, GitHub, YouTube } from "iconoir-react";
+import {
+  Discord,
+  GitHub,
+  Internet as IconInternet,
+  YouTube
+} from "iconoir-react";
 import ocBig from "~/assets/mitsu_oc_big.png";
 import ocSmall from "~/assets/mitsu_oc_small.png";
 import { IconMastodon } from "~/components/IconMastodon";
@@ -108,7 +113,35 @@ import Page from "~/layouts/Page.astro";
       from Windows 7 to Linux (currently Fedora KDE Spin) and never looked back.
     </p>
   </Section>
-  <div style={{ minHeight: "100dvh" }}></div>
+  <Section>
+    <h2>My Projects</h2>
+    <ul id="projects">
+      <li>
+        <h3><a href="/"><IconInternet /> Lorem ipsum</a></h3>
+        <p>
+          dolor sit, amet consectetur adipisicing elit. Quam deleniti et eius
+          dolorum vel sit veritatis modi! Eaque ipsum ullam aliquid illo laborum
+          amet et perferendis, ducimus dolores modi soluta.
+        </p>
+      </li>
+      <li>
+        <h3><a href="/"><IconInternet /> Lorem ipsum</a></h3>
+        <p>
+          dolor sit, amet consectetur adipisicing elit. Quam deleniti et eius
+          dolorum vel sit veritatis modi! Eaque ipsum ullam aliquid illo laborum
+          amet et perferendis, ducimus dolores modi soluta.
+        </p>
+      </li>
+      <li>
+        <h3><a href="/"><IconInternet /> Lorem ipsum</a></h3>
+        <p>
+          dolor sit, amet consectetur adipisicing elit. Quam deleniti et eius
+          dolorum vel sit veritatis modi! Eaque ipsum ullam aliquid illo laborum
+          amet et perferendis, ducimus dolores modi soluta.
+        </p>
+      </li>
+    </ul>
+  </Section>
 </Page>
 
 <style is:global>
@@ -117,8 +150,7 @@ import Page from "~/layouts/Page.astro";
     margin: auto;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
+    place-content: center;
     gap: 0.5rem;
 
     & .ocBig {
@@ -151,9 +183,60 @@ import Page from "~/layouts/Page.astro";
     width: 100%;
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
+    place-content: center;
     gap: 0.5rem;
+  }
+
+  #projects {
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    place-content: center space-around;
+    gap: 1.5rem;
+    width: 100%;
+    margin: 1rem;
+
+    & li {
+      flex-grow: 1;
+      min-width: 280px;
+      max-width: 45%;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      box-shadow:
+        1px 1px 4px var(--secondary),
+        inset 1px 1px 4px var(--highlight);
+      border: 1px solid var(--highlight);
+      background-image: radial-gradient(
+        ellipse at top,
+        var(--secondary),
+        transparent
+      );
+      transition:
+        box-shadow var(--speed) var(--ease),
+        border-color var(--speed) var(--ease);
+
+      & h3 a {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5ch;
+        text-decoration: none;
+        &:not(:hover) {
+          color: var(--primary);
+        }
+      }
+
+      & h3 svg {
+        width: 1.2em;
+        height: 1.2em;
+      }
+
+      &:hover {
+        box-shadow:
+          3px 3px 6px var(--secondary),
+          inset 1px 1px 4px var(--primary);
+        border-color: var(--primary);
+      }
+    }
   }
 
   @media (--mq-medium) {
