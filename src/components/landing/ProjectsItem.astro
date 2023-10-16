@@ -1,0 +1,70 @@
+---
+import type { HTMLAttributes } from "astro/types";
+import type { HTMLProps } from "~/types/HTMLProps";
+
+// TODO: I think this is using the JS version of a rule in a TS file. Might need to fix that in config...
+// eslint-disable-next-line no-unused-vars
+type SvgComponent = (props: HTMLProps<"svg">) => any;
+
+interface Props extends HTMLAttributes<"li"> {
+  title: string;
+  icon?: SvgComponent;
+  href: string;
+}
+
+const { title, icon: IconComponent, href, ...liProps } = Astro.props;
+---
+
+<li {...liProps}>
+  <h3>
+    <a href={href}>
+      {IconComponent && <IconComponent width="1.2em" height="1.2em" />}
+      <span>{title}</span></a
+    >
+  </h3>
+  <slot />
+</li>
+
+<style>
+  li {
+    flex-grow: 1;
+    min-width: 280px;
+    max-width: 45%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow:
+      1px 1px 4px var(--secondary),
+      inset 1px 1px 4px var(--highlight);
+    border: 1px solid var(--highlight);
+    background-image: radial-gradient(
+      ellipse at top,
+      var(--secondary),
+      transparent
+    );
+    transition:
+      box-shadow var(--speed) var(--ease),
+      border-color var(--speed) var(--ease);
+
+    & h3 a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5ch;
+      text-decoration: none;
+      &:not(:hover) {
+        color: var(--primary);
+      }
+    }
+
+    & h3 svg {
+      width: 1.2em;
+      height: 1.2em;
+    }
+
+    &:hover {
+      box-shadow:
+        3px 3px 6px var(--secondary),
+        inset 1px 1px 4px var(--primary);
+      border-color: var(--primary);
+    }
+  }
+</style>

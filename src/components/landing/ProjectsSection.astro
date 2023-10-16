@@ -1,0 +1,26 @@
+---
+import Section from "../Section.astro";
+
+interface Props {
+  title: string;
+}
+---
+
+<Section>
+  <h2>{Astro.props.title}</h2>
+  <ul>
+    <slot />
+  </ul>
+</Section>
+
+<style>
+  ul {
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    place-content: center space-around;
+    gap: 1.5rem;
+    width: 100%;
+    margin: 1rem;
+  }
+</style>

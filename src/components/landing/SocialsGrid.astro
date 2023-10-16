@@ -1,0 +1,18 @@
+<ul><slot /></ul>
+
+<style>
+  ul {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    place-content: center;
+    gap: 0.5rem;
+  }
+
+  @media (--mq-medium) {
+    ul {
+      font-size: 1.25rem;
+    }
+  }
+</style>

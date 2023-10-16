@@ -1,15 +1,20 @@
 ---
 import {
-  Discord,
-  GitHub,
+  Discord as IconDiscord,
+  GitHub as IconGitHub,
   Internet as IconInternet,
-  YouTube
+  YouTube as IconYouTube
 } from "iconoir-react";
 import ocBig from "~/assets/mitsu_oc_big.png";
 import ocSmall from "~/assets/mitsu_oc_small.png";
 import { IconMastodon } from "~/components/IconMastodon";
 import { IconPronounsPage } from "~/components/IconPronounsPage";
 import { IconSteam } from "~/components/IconSteam";
+import HeroSection from "~/components/landing/HeroSection.astro";
+import ProjectsItem from "~/components/landing/ProjectsItem.astro";
+import ProjectsSection from "~/components/landing/ProjectsSection.astro";
+import SocialsGrid from "~/components/landing/SocialsGrid.astro";
+import SocialsItem from "~/components/landing/SocialsItem.astro";
 import Picture from "~/components/Picture.astro";
 import Section from "~/components/Section.astro";
 import Page from "~/layouts/Page.astro";
@@ -18,80 +23,52 @@ import Page from "~/layouts/Page.astro";
 <Page
   title="Mitsunee"
   description="Nonbinary web developer, music-addict and Linux user from Germany">
-  <section id="hero">
+  <HeroSection>
     <Picture image={ocBig} alt="Mitsunee" class="ocBig" />
     <Picture image={ocSmall} alt="Mitsunee" class="ocSmall" />
     <div>
       <h1>Mitsunee</h1>
       <p>Nonbinary web developer, music-addict and Linux user from Germany</p>
-      <ul id="socials">
-        <li>
-          <a
-            class="button"
-            href="https://ieji.de/@mitsunee"
-            target="_blank"
-            rel="noopener noreferrer me"
-            aria-label="Mastodon"
-            style={{ "--primary": "#6364FF" }}>
-            <IconMastodon />
-          </a>
-        </li>
-        <li>
-          <a
-            class="button"
-            href="https://en.pronouns.page/@mitsunee"
-            target="_blank"
-            rel="noopener noreferrer me"
-            aria-label="Pronouns.page"
-            style={{ "--primary": "#c71585" }}>
-            <IconPronounsPage />
-          </a>
-        </li>
-        <li>
-          <a
-            class="button"
-            href="https://github.com/Mitsunee"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Github">
-            <GitHub />
-          </a>
-        </li>
-        <li>
-          <a
-            class="button"
-            href="https://youtube.com/@mitsunee_"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="YouTube"
-            style={{ "--primary": "red" }}>
-            <YouTube />
-          </a>
-        </li>
-        <li>
-          <a
-            class="button"
-            href="https://discord.com/users/140002643878739968"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Discord Profile"
-            style={{ "--primary": "#5865F2" }}>
-            <Discord />
-          </a>
-        </li>
-        <li>
-          <a
-            class="button"
-            href="https://steamcommunity.com/id/mitsunee/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Steam">
-            <IconSteam />
-          </a>
-        </li>
-      </ul>
+      <SocialsGrid>
+        <SocialsItem
+          href="https://ieji.de/@mitsunee"
+          icon={IconMastodon}
+          aria-label="Mastodon"
+          rel="me"
+          style={{ "--primary": "#6364FF" }}
+        />
+        <SocialsItem
+          href="https://en.pronouns.page/@mitsunee"
+          icon={IconPronounsPage}
+          rel="me"
+          aria-label="Pronouns.page"
+          style={{ "--primary": "#c71585" }}
+        />
+        <SocialsItem
+          href="https://github.com/Mitsunee"
+          icon={IconGitHub}
+          aria-label="Github"
+        />
+        <SocialsItem
+          href="https://youtube.com/@mitsunee_"
+          icon={IconYouTube}
+          aria-label="YouTube"
+          style={{ "--primary": "red" }}
+        />
+        <SocialsItem
+          href="https://discord.com/users/140002643878739968"
+          icon={IconDiscord}
+          aria-label="Discord Profile"
+          style={{ "--primary": "#5865F2" }}
+        />
+        <SocialsItem
+          href="https://steamcommunity.com/id/mitsunee/"
+          icon={IconSteam}
+          aria-label="Steam"
+        />
+      </SocialsGrid>
     </div>
-  </section>
+  </HeroSection>
   <Section background>
     <h2>About me</h2>
     <p>
@@ -113,148 +90,48 @@ import Page from "~/layouts/Page.astro";
       from Windows 7 to Linux (currently Fedora KDE Spin) and never looked back.
     </p>
   </Section>
-  <Section>
-    <h2>My Projects</h2>
-    <ul id="projects">
-      <li>
-        <h3><a href="/"><IconInternet /> Lorem ipsum</a></h3>
-        <p>
-          dolor sit, amet consectetur adipisicing elit. Quam deleniti et eius
-          dolorum vel sit veritatis modi! Eaque ipsum ullam aliquid illo laborum
-          amet et perferendis, ducimus dolores modi soluta.
-        </p>
-      </li>
-      <li>
-        <h3><a href="/"><IconInternet /> Lorem ipsum</a></h3>
-        <p>
-          dolor sit, amet consectetur adipisicing elit. Quam deleniti et eius
-          dolorum vel sit veritatis modi! Eaque ipsum ullam aliquid illo laborum
-          amet et perferendis, ducimus dolores modi soluta.
-        </p>
-      </li>
-      <li>
-        <h3><a href="/"><IconInternet /> Lorem ipsum</a></h3>
-        <p>
-          dolor sit, amet consectetur adipisicing elit. Quam deleniti et eius
-          dolorum vel sit veritatis modi! Eaque ipsum ullam aliquid illo laborum
-          amet et perferendis, ducimus dolores modi soluta.
-        </p>
-      </li>
-    </ul>
-  </Section>
+  <ProjectsSection title="My Projects">
+    <ProjectsItem title="Lorem ipsum" icon={IconInternet} href="/">
+      <p>
+        dolor sit, amet consectetur adipisicing elit. Quam deleniti et eius
+        dolorum vel sit veritatis modi! Eaque ipsum ullam aliquid illo laborum
+        amet et perferendis, ducimus dolores modi soluta.
+      </p>
+    </ProjectsItem>
+    <ProjectsItem title="Lorem ipsum" icon={IconInternet} href="/">
+      <p>
+        dolor sit, amet consectetur adipisicing elit. Quam deleniti et eius
+        dolorum vel sit veritatis modi! Eaque ipsum ullam aliquid illo laborum
+        amet et perferendis, ducimus dolores modi soluta.
+      </p>
+    </ProjectsItem>
+    <ProjectsItem title="Lorem ipsum" icon={IconInternet} href="/">
+      <p>
+        dolor sit, amet consectetur adipisicing elit. Quam deleniti et eius
+        dolorum vel sit veritatis modi! Eaque ipsum ullam aliquid illo laborum
+        amet et perferendis, ducimus dolores modi soluta.
+      </p>
+    </ProjectsItem>
+  </ProjectsSection>
 </Page>
 
 <style is:global>
-  #hero {
-    width: var(--content-width);
-    margin: auto;
-    display: flex;
-    flex-flow: column nowrap;
-    place-content: center;
-    gap: 0.5rem;
-
-    & .ocBig {
-      display: none;
-    }
-
-    & .ocSmall {
-      display: block;
-      border-bottom-left-radius: 100%;
-      border-bottom-right-radius: 100%;
-    }
-
-    & > div {
-      padding: 0.5rem;
-      text-align: center;
-      & p {
-        text-align: center;
-      }
-    }
-
-    & h1 {
-      margin: 1.5rem 0px;
-      width: 100%;
-      text-shadow: 2px 2px 4px var(--accent);
-    }
+  .ocBig {
+    display: none;
   }
 
-  #socials {
-    list-style: none;
-    width: 100%;
-    display: flex;
-    flex-flow: row wrap;
-    place-content: center;
-    gap: 0.5rem;
-  }
-
-  #projects {
-    list-style: none;
-    display: flex;
-    flex-flow: row wrap;
-    place-content: center space-around;
-    gap: 1.5rem;
-    width: 100%;
-    margin: 1rem;
-
-    & li {
-      flex-grow: 1;
-      min-width: 280px;
-      max-width: 45%;
-      padding: 1rem;
-      border-radius: 0.5rem;
-      box-shadow:
-        1px 1px 4px var(--secondary),
-        inset 1px 1px 4px var(--highlight);
-      border: 1px solid var(--highlight);
-      background-image: radial-gradient(
-        ellipse at top,
-        var(--secondary),
-        transparent
-      );
-      transition:
-        box-shadow var(--speed) var(--ease),
-        border-color var(--speed) var(--ease);
-
-      & h3 a {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5ch;
-        text-decoration: none;
-        &:not(:hover) {
-          color: var(--primary);
-        }
-      }
-
-      & h3 svg {
-        width: 1.2em;
-        height: 1.2em;
-      }
-
-      &:hover {
-        box-shadow:
-          3px 3px 6px var(--secondary),
-          inset 1px 1px 4px var(--primary);
-        border-color: var(--primary);
-      }
-    }
+  .ocSmall {
+    display: block;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
   }
 
   @media (--mq-medium) {
-    #hero {
-      flex-flow: row nowrap;
-
-      & .ocBig {
-        display: block;
-      }
-      & .ocSmall {
-        display: none;
-      }
-      & > div {
-        padding: 1rem;
-      }
+    .ocBig {
+      display: block;
     }
-    #socials {
-      font-size: 1.25rem;
+    .ocSmall {
+      display: none;
     }
   }
 </style>

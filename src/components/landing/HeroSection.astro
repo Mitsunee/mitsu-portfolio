@@ -1,0 +1,42 @@
+---
+// this needs to use global styling since otherwise child-elements won't get the
+// styles written here and I don't wanna do multiple components for this
+---
+
+<section id="hero">
+  <slot />
+</section>
+
+<style is:global>
+  #hero {
+    width: var(--content-width);
+    margin: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    place-content: center;
+    gap: 0.5rem;
+
+    & > div {
+      padding: 0.5rem;
+      text-align: center;
+      & p {
+        text-align: center;
+      }
+    }
+
+    & h1 {
+      margin: 1.5rem 0px;
+      width: 100%;
+      text-shadow: 2px 2px 4px var(--accent);
+    }
+  }
+
+  @media (--mq-medium) {
+    #hero {
+      flex-flow: row nowrap;
+      & > div {
+        padding: 1rem;
+      }
+    }
+  }
+</style>
