@@ -1,5 +1,6 @@
 ---
 import {
+  CodeBracketsSquare as IconCode,
   Discord as IconDiscord,
   GitHub as IconGitHub,
   Internet as IconInternet,
@@ -91,25 +92,32 @@ import Page from "~/layouts/Page.astro";
     </p>
   </Section>
   <ProjectsSection title="My Projects">
-    <ProjectsItem title="Lorem ipsum" icon={IconInternet} href="/">
+    <ProjectsItem
+      title="Mitsunee | Blog"
+      icon={IconInternet}
+      href="https://blog.mitsunee.com">
       <p>
-        dolor sit, amet consectetur adipisicing elit. Quam deleniti et eius
-        dolorum vel sit veritatis modi! Eaque ipsum ullam aliquid illo laborum
-        amet et perferendis, ducimus dolores modi soluta.
+        My personal blog where I post guides and rants about my hobbies, Linux,
+        tech, coding and games.
       </p>
     </ProjectsItem>
-    <ProjectsItem title="Lorem ipsum" icon={IconInternet} href="/">
+    <ProjectsItem
+      title="Foxkit"
+      icon={IconCode}
+      href="https://github.com/foxkit-js">
       <p>
-        dolor sit, amet consectetur adipisicing elit. Quam deleniti et eius
-        dolorum vel sit veritatis modi! Eaque ipsum ullam aliquid illo laborum
-        amet et perferendis, ducimus dolores modi soluta.
+        Collection of Configs and modules to reduce copypasting between my
+        projects as well as providing known good versions of common modules.
       </p>
     </ProjectsItem>
-    <ProjectsItem title="Lorem ipsum" icon={IconInternet} href="/">
+    <ProjectsItem
+      title="Pokemon Gen3 Damage Calculator"
+      icon={IconInternet}
+      href="https://www.mitsunee.com/gen3dmgcalc"
+      class="pkmn">
       <p>
-        dolor sit, amet consectetur adipisicing elit. Quam deleniti et eius
-        dolorum vel sit veritatis modi! Eaque ipsum ullam aliquid illo laborum
-        amet et perferendis, ducimus dolores modi soluta.
+        Damage calculator for the third generation of Pokémon games for GBA
+        (R/S/E, FR/LG) and Gamecube (Colosseum/XD).
       </p>
     </ProjectsItem>
   </ProjectsSection>
@@ -124,6 +132,13 @@ import Page from "~/layouts/Page.astro";
     display: block;
     border-bottom-left-radius: 100%;
     border-bottom-right-radius: 100%;
+  }
+
+  .pkmn {
+    background-image: url(/assets/bgpkmn.jpg);
+    background-size: cover;
+    color: var(--black);
+    --primary: #00b0f0;
   }
 
   @media (--mq-medium) {
