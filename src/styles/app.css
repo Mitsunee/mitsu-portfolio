@@ -1,60 +1,49 @@
 :root {
-  /** Colours **/
-  --text: #100405;
-  --background: #f3ecec;
-  --primary: #ffbb5c;
-  --secondary: #dad7db;
-  --highlight: #afa9b1;
-  --accent: #ad1f4e;
-  --shadow: #10040546;
-  --black: var(--text);
-
   /** non-themeable **/
   --speed: 250ms;
   --ease: ease-out;
   --hover-scale: 1.075;
-  --header-height: 2.5rem; /* TODO: based on min(?vmax, 4rem) or something similar? */
+  --header-height: 2.5rem;
   --icon-size: calc(var(--header-height) * 0.75);
   --content-width: min(90vw, 1480px);
   --radius: 0.5rem;
   --radius-large: 1rem;
+
+  /** Booleans! **/
+  --TRUE: initial;
+  --FALSE: ;
+
+  /** Color Themes **/
+  --text: var(--theme-light, #100405) var(--theme-dark, #fbeff0);
+  --background: var(--theme-light, #f3ecec) var(--theme-dark, #130c0c);
+  --primary: #ffbb5c;
+  --secondary: var(--theme-light, #dad7db) var(--theme-dark, #272428);
+  --highlight: var(--theme-light, #afa9b1) var(--theme-dark, #544e56);
+  --accent: var(--theme-light, #ad1f4e) var(--theme-dark, #e05281);
+  --shadow: var(--theme-light, #10040546) var(--theme-dark, #130c0c8f);
+  --black: var(--theme-light, #100405) var(--theme-dark, #130c0c);
 }
 
+/** set booleans for themes **/
+:root,
 :root[data-theme="light"] {
-  --text: #100405;
-  --background: #f3ecec;
-  --primary: #ffbb5c;
-  --secondary: #dad7db;
-  --highlight: #afa9b1;
-  --accent: #ad1f4e;
-  --shadow: #10040546;
-  --black: var(--text);
+  --theme-light: var(--TRUE);
+  --theme-dark: var(--FALSE);
 }
 
 :root[data-theme="dark"] {
-  --text: #fbeff0;
-  --background: #130c0c;
-  --primary: #ffbb5c;
-  --secondary: #272428;
-  --highlight: #544e56;
-  --accent: #e05281;
-  --shadow: #130c0c8f;
-  --black: var(--background);
+  --theme-light: var(--FALSE);
+  --theme-dark: var(--TRUE);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --text: #fbeff0;
-    --background: #130c0c;
-    --primary: #ffbb5c;
-    --secondary: #272428;
-    --highlight: #544e56;
-    --accent: #e05281;
-    --shadow: #130c0c8f;
-    --black: var(--background);
+    --theme-light: var(--FALSE);
+    --theme-dark: var(--TRUE);
   }
 }
 
+/** root/body styles **/
 *,
 *:before,
 *:after {
@@ -85,29 +74,27 @@ body {
   background-color: var(--highlight);
 }
 
-/* width */
+/* Scrollbar */
 ::-webkit-scrollbar {
   width: 0.75rem;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   background: var(--secondary);
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: var(--highlight);
   border-radius: var(--radius);
   border: 2px solid var(--secondary);
 }
 
-/* For Mozilla-based browsers */
 html {
   scrollbar-width: auto;
   scrollbar-color: var(--secondary);
 }
 
+/** Text sizes **/
 h1,
 h2,
 h3,
@@ -148,6 +135,7 @@ small,
   font-size: 0.8rem;
 }
 
+/** Global styles **/
 a,
 .link {
   text-decoration: underline;
