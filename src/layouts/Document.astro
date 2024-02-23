@@ -34,7 +34,10 @@ const pageIcon = `${Astro.url.origin}/assets/icons/icon-192.png`;
     <meta name="twitter:image" content={pageIcon} />
     <meta name="twitter:author" content="@Mitsunee" />
     <meta name="theme-color" content="#ffbb5c" />
-    <script src="../stores/theme.ts"></script>
+    <script>
+      import { initTheme } from "~/utils/initTheme";
+      initTheme();
+    </script>
   </head>
 
   <body>
