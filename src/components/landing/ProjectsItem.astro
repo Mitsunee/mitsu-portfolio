@@ -4,7 +4,7 @@ import type { HTMLProps } from "~/types/HTMLProps";
 
 // TODO: I think this is using the JS version of a rule in a TS file. Might need to fix that in config...
 // eslint-disable-next-line no-unused-vars
-type SvgComponent = (props: HTMLProps<"svg">) => any;
+type SvgComponent = (props: HTMLProps<"svg">) => unknown;
 
 interface Props extends HTMLAttributes<"li"> {
   title: string;

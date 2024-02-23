@@ -12,7 +12,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ["**/*.ts?(x)"],
+      files: ["**/*.ts?(x)", "**/*.astro"],
       plugins: ["@typescript-eslint"],
       parser: "@typescript-eslint/parser",
       parserOptions: {
