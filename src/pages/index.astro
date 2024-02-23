@@ -3,6 +3,7 @@ import {
   CodeBracketsSquare as IconCode,
   Discord as IconDiscord,
   GitHub as IconGitHub,
+  GitLabFull as IconGitlab,
   Internet as IconInternet,
   YouTube as IconYouTube
 } from "iconoir-react";
@@ -23,13 +24,13 @@ import Page from "~/layouts/Page.astro";
 
 <Page
   title="Mitsunee"
-  description="Nonbinary web developer, music-addict and Linux user from Germany">
+  description="Web developer, music-addict and Linux user from Germany">
   <HeroSection>
     <Picture image={ocBig} alt="Mitsunee" class="ocBig" />
     <Picture image={ocSmall} alt="Mitsunee" class="ocSmall" />
     <div>
       <h1>Mitsunee</h1>
-      <p>Nonbinary web developer, music-addict and Linux user from Germany</p>
+      <p>Web developer, music-addict and Linux user from Germany</p>
       <SocialsGrid>
         <SocialsItem
           href="https://ieji.de/@mitsunee"
@@ -49,6 +50,11 @@ import Page from "~/layouts/Page.astro";
           href="https://github.com/Mitsunee"
           icon={IconGitHub}
           aria-label="Github"
+        />
+        <SocialsItem
+          href="https://gitlab.com/mitsunee"
+          icon={IconGitlab}
+          aria-label="Gitlab"
         />
         <SocialsItem
           href="https://youtube.com/@mitsunee_"
@@ -73,22 +79,21 @@ import Page from "~/layouts/Page.astro";
   <Section background>
     <h2>About me</h2>
     <p>
-      I identify as Agenderfluid/<wbr />Transfemme (she/they, fluctuating
-      between female and agender, aka Femflux) and came out online in 2015-ish,
-      though I'm still mostly boymoding in reallife. I usually simplify my
-      (online) identity as Nonbinary.
-    </p>
-    <p>
       I play Fate/Grand Order, Honkai Star Rail and collect Rubik's
       Cube-inspired puzzles and Anime plush dolls/<wbr />Nesoberi. I listen to
       Metal, sometimes Drum&Bass or Hardstyle, and watch way too much YouTube.
       Sometimes I also try to create pixelart such as my current profile
-      picture, which represents my female personality.
+      picture.
     </p>
     <p>
       I've been tinkering with web development since childhood and started
       learning JavaScript (and later Node.js) around 2016. In 2019 I switched
       from Windows 7 to Linux (currently Fedora KDE Spin) and never looked back.
+    </p>
+    <p>
+      I'm Agenderfluid/<wbr />Transfemme (she/they, fluctuating between female
+      and agender, aka Femflux) and came out online in 2015, though I'm still
+      mostly “boymoding” in reallife.
     </p>
   </Section>
   <ProjectsSection title="My Projects">
