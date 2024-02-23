@@ -1,247 +1,157 @@
 ---
-import webIcon from "iconoir/icons/internet.svg";
-import devIcon from "iconoir/icons/code-brackets-square.svg";
-import PageWithHero from "~/layouts/PageWithHero.astro";
-import { Headline } from "~/components/Headline";
-import { Section, Columns } from "~/components/Section";
-import { ProjectsGrid, ProjectsGridItem } from "~/components/ProjectsGrid";
-import { FavoritesGrid, FavoritesGridItem } from "~/components/FavoritesGrid";
-import { Email } from "~/components/Email";
-
-const title = "Mitsunee";
-const description =
-  "Freelance Web Developer | Open Source Developer and Contributor | Sometimes Translation Volunteer";
-
-const webIconUrl = webIcon.src;
-const devIconUrl = devIcon.src;
-const nierImageUrl = "/assets/favorites/nier-automata.jpg";
-const suzukaImageUrl = "/assets/favorites/suzuka.jpg";
-const morsImageUrl = "/assets/favorites/mors.jpg";
-const belakorImageUrl = "/assets/favorites/belakor.jpg";
-const tmglImageUrl = "/assets/favorites/tmgl.png";
+import {
+  CodeBracketsSquare as IconCode,
+  Discord as IconDiscord,
+  Github as IconGitHub,
+  GitlabFull as IconGitlab,
+  Internet as IconInternet,
+  Youtube as IconYouTube
+} from "iconoir-react";
+import ocBig from "~/assets/mitsu_oc_big.png";
+import ocSmall from "~/assets/mitsu_oc_small.png";
+import { IconMastodon } from "~/components/IconMastodon";
+import { IconPronounsPage } from "~/components/IconPronounsPage";
+import { IconSteam } from "~/components/IconSteam";
+import HeroSection from "~/components/landing/HeroSection.astro";
+import ProjectsItem from "~/components/landing/ProjectsItem.astro";
+import ProjectsSection from "~/components/landing/ProjectsSection.astro";
+import SocialsGrid from "~/components/landing/SocialsGrid.astro";
+import SocialsItem from "~/components/landing/SocialsItem.astro";
+import Picture from "~/components/Picture.astro";
+import Section from "~/components/Section.astro";
+import Page from "~/layouts/Page.astro";
 ---
 
-<PageWithHero title={title} description={description}>
-  <Columns>
-    <Section>
-      <Headline>About me</Headline>
+<Page
+  title="Mitsunee"
+  description="Web developer, music-addict and Linux user from Germany">
+  <HeroSection>
+    <Picture image={ocBig} alt="Mitsunee" class="ocBig" />
+    <Picture image={ocSmall} alt="Mitsunee" class="ocSmall" />
+    <div>
+      <h1>Mitsunee</h1>
+      <p>Web developer, music-addict and Linux user from Germany</p>
+      <SocialsGrid>
+        <SocialsItem
+          href="https://ieji.de/@mitsunee"
+          icon={IconMastodon}
+          aria-label="Mastodon"
+          rel="me"
+          style={{ "--primary": "#6364FF" }}
+        />
+        <SocialsItem
+          href="https://en.pronouns.page/@mitsunee"
+          icon={IconPronounsPage}
+          rel="me"
+          aria-label="Pronouns.page"
+          style={{ "--primary": "#c71585" }}
+        />
+        <SocialsItem
+          href="https://github.com/Mitsunee"
+          icon={IconGitHub}
+          aria-label="Github"
+        />
+        <SocialsItem
+          href="https://gitlab.com/mitsunee"
+          icon={IconGitlab}
+          aria-label="Gitlab"
+        />
+        <SocialsItem
+          href="https://youtube.com/@mitsunee_"
+          icon={IconYouTube}
+          aria-label="YouTube"
+          style={{ "--primary": "red" }}
+        />
+        <SocialsItem
+          href="https://discord.com/users/140002643878739968"
+          icon={IconDiscord}
+          aria-label="Discord Profile"
+          style={{ "--primary": "#5865F2" }}
+        />
+        <SocialsItem
+          href="https://steamcommunity.com/id/mitsunee/"
+          icon={IconSteam}
+          aria-label="Steam"
+        />
+      </SocialsGrid>
+    </div>
+  </HeroSection>
+  <Section background>
+    <h2>About me</h2>
+    <p>
+      I play Fate/Grand Order, Honkai Star Rail and collect Rubik's
+      Cube-inspired puzzles and Anime plush dolls/<wbr />Nesoberi. I listen to
+      Metal, sometimes Drum&Bass or Hardstyle, and watch way too much YouTube.
+      Sometimes I also try to create pixelart such as my current profile
+      picture.
+    </p>
+    <p>
+      I've been tinkering with web development since childhood and started
+      learning JavaScript (and later Node.js) around 2016. In 2019 I switched
+      from Windows 7 to Linux (currently Fedora KDE Spin) and never looked back.
+    </p>
+    <p>
+      I'm Agenderfluid/<wbr />Transfemme (she/they, fluctuating between female
+      and agender, aka Femflux) and came out online in 2015, though I'm still
+      mostly “boymoding” in reallife.
+    </p>
+  </Section>
+  <ProjectsSection title="My Projects">
+    <ProjectsItem
+      title="Mitsunee | Blog"
+      icon={IconInternet}
+      href="https://blog.mitsunee.com">
       <p>
-        I'm a web developer from Germany who's been tinkering with web
-        technologies since childhood. I learned PHP through a friend in school
-        and switched to mainly JavaScript in 2016, learning about Node.js in
-        2019 after switching to Linux as my OS of choice.
-      </p>
-      <p>
-        In my freetime my focus is on providing useful apps related to my
-        hobbies (like Gacha games) and contributing to open source development.
-        I have also been working as a freelancer in frontend development since
-        early 2021.
-      </p>
-      <h2>Technology I use</h2>
-      <ul class="taglist">
-        <li>HTML5 / CSS3 / Javascript (ES2021) / TypeScript</li>
-        <li>React/Next.js (Fullstack apps)</li>
-        <li>Preact/Vite (Static Sites)</li>
-        <li>PostCSS</li>
-        <li>Github Actions</li>
-        <li>Linux (Ubuntu, CentOS)</li>
-      </ul>
-      <div id="cta">
-        Want to know my skills in more detail? There's a full list of tech I
-        have learned or am currently learning on{" "}
-        <a
-          href="https://github.com/users/Mitsunee/projects/6/views/1"
-          target="_blank"
-          rel="noopener noreferrer">
-          Github
-        </a>
-         .<br />
-        <br />
-         You can contact my on social media or via <Email client:load />!
-      </div>
-    </Section>
-    <ProjectsGrid>
-      <ProjectsGridItem
-        title="FGO Timers"
-        titleIcon={webIconUrl}
-        href="https://fgo.mitsunee.com"
-        className="fgo">
-        Event timers and game information for Fate/Grand Order.
-      </ProjectsGridItem>
-      <ProjectsGridItem
-        title="Mitsunee | Blog"
-        titleIcon={webIconUrl}
-        href="https://blog.mitsunee.com/"
-        className="blog">
         My personal blog where I post guides and rants about my hobbies, Linux,
         tech, coding and games.
-      </ProjectsGridItem>
-      <ProjectsGridItem
-        title="Modern Diacritics"
-        titleIcon={devIconUrl}
-        href="https://www.npmjs.com/package/modern-diacritics"
-        className="mdrn">
-        A modern way to latinize/ascii-fold strings and normalize symbols.
-        Available on{" "}
-        <a href="https://www.npmjs.com/package/modern-diacritics">npm</a>{" "}
-         and opensource on{" "}
-        <a href="https://github.com/Mitsunee/modern-diacritics">Github</a>.
-      </ProjectsGridItem>
-      <ProjectsGridItem
-        title="Pokemon Gen3 Damage Calculator"
-        titleIcon={webIconUrl}
-        href="https://www.mitsunee.com/gen3dmgcalc"
-        className="pkmn">
-        Damage calculator for the &quot;Generation 3&quot; Pokemon games for GBA
-        and Gamecube.
-      </ProjectsGridItem>
-      <ProjectsGridItem
-        title="Foxkit"
-        titleIcon={devIconUrl}
-        href="https://github.com/mitsunee/foxkit"
-        className="fxkt">
+      </p>
+    </ProjectsItem>
+    <ProjectsItem
+      title="Foxkit"
+      icon={IconCode}
+      href="https://github.com/foxkit-js">
+      <p>
         Collection of Configs and modules to reduce copypasting between my
-        projects as well as providing known good versions of common modules
-        (like sorting algorithms and parsing data files)
-      </ProjectsGridItem>
-    </ProjectsGrid>
-  </Columns>
-  <FavoritesGrid>
-    <FavoritesGridItem
-      type="Game"
-      src={nierImageUrl}
-      name="NieR Automata"
-      from="Square Enix"
-    />
-    <FavoritesGridItem
-      type="Character"
-      src={suzukaImageUrl}
-      name="Suzuka Gozen"
-      from="Fate/Grand Order"
-    />
-    <FavoritesGridItem
-      type="Esport"
-      src={tmglImageUrl}
-      name="Trackmania Grand League"
-      from="Ubisoft Nadeo"
-    />
-    <FavoritesGridItem
-      type="Metal Band"
-      src={morsImageUrl}
-      name="Mors Principium Est"
-    />
-    <FavoritesGridItem
-      type="Metal Band"
-      src={belakorImageUrl}
-      name="Be'lakor"
-    />
-  </FavoritesGrid>
-</PageWithHero>
+        projects as well as providing known good versions of common modules.
+      </p>
+    </ProjectsItem>
+    <ProjectsItem
+      title="Pokemon Gen3 Damage Calculator"
+      icon={IconInternet}
+      href="https://www.mitsunee.com/gen3dmgcalc"
+      class="pkmn">
+      <p>
+        Damage calculator for the third generation of Pokémon games for GBA
+        (R/S/E, FR/LG) and Gamecube (Colosseum/XD).
+      </p>
+    </ProjectsItem>
+  </ProjectsSection>
+</Page>
 
-<style>
-  .taglist {
-    display: flex;
-    flex-flow: row wrap;
-    gap: 1.2em 1.2ch;
-    margin: 0.5rem 0px;
-    padding: 0px 1ch;
-
-    & li {
-      flex: 1 1;
-      display: block;
-      padding: 0.8em 1.5ch;
-      min-width: 50%;
-      width: fit-content;
-      max-width: 100%;
-      border-radius: 1rem;
-      text-align: center;
-      background-color: var(--highlight);
-      box-shadow: 1px 1px 3px var(--dark);
-
-      @media (--mq-small) {
-        min-width: max-content;
-      }
-    }
+<style is:global>
+  .ocBig {
+    display: none;
   }
 
-  .fgo {
-    background-color: #2e627a;
-    background-image: radial-gradient(ellipse at top, #2e2c6a, transparent),
-      radial-gradient(ellipse at bottom, #680c5f, transparent);
-  }
-
-  .mdrn {
-    background-image: radial-gradient(
-        ellipse at 3% -1%,
-        #4a5950 41%,
-        rgba(255, 255, 255, 0) 83%
-      ),
-      radial-gradient(
-        circle at -93% -118%,
-        #642114 78%,
-        rgba(255, 255, 255, 0) 95%
-      ),
-      radial-gradient(ellipse at 3% 52%, rgba(255, 255, 255, 0) 0%, #0d0e1a 54%);
-  }
-
-  .fxkt {
-    background-color: #222;
-    background-image: linear-gradient(to top, #141414d9, transparent),
-      linear-gradient(45deg, #141414ff 25%, transparent 25%),
-      linear-gradient(-45deg, #141414ff 25%, transparent 25%),
-      linear-gradient(45deg, transparent 75%, #141414ff 75%),
-      linear-gradient(-45deg, transparent 75%, #141414ff 75%),
-      radial-gradient(ellipse at top, #232323d9, transparent);
-    background-size:
-      100% 100vh,
-      48px 48px,
-      48px 48px,
-      48px 48px,
-      48px 48px,
-      100% 100vh;
-    background-position:
-      0 0,
-      0 0,
-      0 24px,
-      24px -24px,
-      -24px 0px,
-      0 0;
+  .ocSmall {
+    display: block;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
   }
 
   .pkmn {
-    background-image: url("/assets/bgpkmn.jpg");
+    background-image: url(/assets/bgpkmn.jpg);
     background-size: cover;
-    background-position: bottom center;
-    color: var(--dark);
-    & h1 {
-      text-shadow: 1px 1px 1.5px var(--dark);
+    color: var(--black);
+    --primary: #00b0f0;
+  }
+
+  @media (--mq-medium) {
+    .ocBig {
+      display: block;
     }
-  }
-
-  .blog {
-    background-color: var(--dark);
-    background-image: radial-gradient(
-      ellipse at top,
-      var(--highlight),
-      transparent 75%
-    );
-  }
-
-  #cta {
-    font-size: 1.1em;
-    line-height: 150%;
-    text-align: center;
-    margin: 1.5em 0.8em;
-    padding: 2em min(5%, 2rem);
-    background-color: var(--dark);
-    box-shadow:
-      2px 2px 4px var(--dark),
-      inset 1px 1px 4px var(--highlight);
-    border-radius: 0.5em;
-
-    & a {
-      background: var(--highlight);
-      padding: 0.25em 0.25ch;
+    .ocSmall {
+      display: none;
     }
   }
 </style>

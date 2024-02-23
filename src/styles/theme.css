@@ -1,0 +1,48 @@
+:root {
+  /** non-themeable **/
+  --speed: 250ms;
+  --ease: ease-out;
+  --hover-scale: 1.075;
+  --header-height: 2.5rem;
+  --icon-size: calc(var(--header-height) * 0.75);
+  --content-width: min(90vw, 1480px);
+  --radius: 0.5rem;
+  --radius-large: 1rem;
+
+  /** Fonts **/
+  --font-sans: "Atkinson Hyperlegible";
+  --font-title: "Lexend";
+
+  /** Booleans! (see https://css-tricks.com/a-dry-approach-to-color-themes-in-css/) **/
+  --TRUE: initial;
+  --FALSE: ;
+
+  /** Color Themes **/
+  --text: var(--theme-light, #100405) var(--theme-dark, #fbeff0);
+  --background: var(--theme-light, #f3ecec) var(--theme-dark, #130c0c);
+  --primary: #ffbb5c;
+  --secondary: var(--theme-light, #dad7db) var(--theme-dark, #272428);
+  --highlight: var(--theme-light, #afa9b1) var(--theme-dark, #544e56);
+  --accent: var(--theme-light, #ad1f4e) var(--theme-dark, #e05281);
+  --shadow: var(--theme-light, #10040546) var(--theme-dark, #130c0c8f);
+  --black: var(--theme-light, #100405) var(--theme-dark, #130c0c);
+}
+
+/** set booleans for themes **/
+:root,
+:root[data-theme="light"] {
+  --theme-light: var(--TRUE);
+  --theme-dark: var(--FALSE);
+}
+
+:root[data-theme="dark"] {
+  --theme-light: var(--FALSE);
+  --theme-dark: var(--TRUE);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --theme-light: var(--FALSE);
+    --theme-dark: var(--TRUE);
+  }
+}

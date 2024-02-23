@@ -1,12 +1,20 @@
 ---
-import Page from "~/layouts/Page.astro";
 import { Headline } from "~/components/Headline";
-import { Section } from "~/components/Section";
+import Section from "~/components/Section.astro";
+import Page from "~/layouts/Page.astro";
 ---
 
-<Page title="This site has moved" description="" noRobots>
+<Page
+  title="This site has moved"
+  description="As of Sep 18, 2023 FGO Timers has been discontinued. Please visit the site by following the link below to read the full statement."
+  noRobots>
   <Section>
     <Headline>FGO Timers has moved</Headline>
+    <p>
+      <b>Update:</b> As of Sep 18, 2023 FGO Timers has been discontinued. Please
+      visit the site by following the link below to read the full statement.
+    </p>
+    <hr />
     <p>
       Since Nov 22, 2021 FGO Timers and most other Fate/Grand Order related
       pages have moved to a new address: <a
@@ -27,9 +35,8 @@ import { Section } from "~/components/Section";
     <p>
       The <a href="https://www.mitsunee.com/fgo-exp-ce/"
         >FGO CE Exp Calculator</a
-      > has not been ported yet and remains available on this domain. <b
-        >This page will be removed</b
-      > when all tools are fully ported over.
+      > remains available on this domain until I decide to remove both it and FGO
+      Timers.
     </p>
   </Section>
 </Page>

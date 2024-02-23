@@ -14,7 +14,7 @@ Make sure you have [node.js] (version 16 or higher) and [pnpm] (version 8) insta
 
 ```shell
 pnpm install
-./install-sharp.sh
+./scripts/install-sharp.sh
 pnpm dev
 ```
 
@@ -29,6 +29,22 @@ pnpm lint:strict
 pnpm format:check
 pnpm typecheck
 ```
+
+<details>
+<summary>Full list of commands</summary>
+
+```shell
+pnpm format # formats entire codebase
+pnpm format:check # checks formatting on entire codebase
+pnpm lint # standard lint check on entire codebase
+pnpm lint:fix # standard lint check on entire codebase with autofix enabled
+pnpm lint:strict # strict lint check on entire codebase
+pnpm dev # start dev server
+pnpm typecheck # run typechecks on entire codebase
+pnpm build # create production build
+```
+
+</details>
 
 ## Production build
 

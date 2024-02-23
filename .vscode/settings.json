@@ -1,0 +1,37 @@
+{
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "astro"
+  ],
+
+  "[html][javascript][typescript][css][scss][json][jsonc][yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[javascriptreact][typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[astro]": {
+    "editor.defaultFormatter": "astro-build.astro-vscode",
+    "editor.formatOnSave": true
+  },
+
+  "css.validate": false,
+  "scss.validate": false,
+
+  "files.exclude": {
+    "**/dist": true,
+    "**/node_modules": true
+  },
+  "files.associations": {
+    "*.module.css": "scss"
+  },
+  "explorer.autoRevealExclude": {
+    "**/dist": true,
+    "**/node_modules": true
+  }
+}

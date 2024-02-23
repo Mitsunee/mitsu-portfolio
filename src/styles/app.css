@@ -1,0 +1,170 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  line-height: 1.3em;
+}
+
+html,
+body {
+  max-width: 100%;
+  min-height: 100dvh;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-sans);
+  font-weight: 400;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+}
+
+::selection {
+  background-color: var(--highlight);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 0.75rem;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--highlight);
+  border-radius: var(--radius);
+  border: 2px solid var(--secondary);
+}
+
+html {
+  scrollbar-width: auto;
+  scrollbar-color: var(--secondary);
+}
+
+/** Text sizes **/
+h1,
+h2,
+h3,
+h4,
+h5,
+.title {
+  font-family: var(--font-title);
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 3.053rem;
+}
+
+h2 {
+  font-size: 2.442rem;
+}
+
+h3 {
+  font-size: 1.954rem;
+}
+
+h4,
+.big {
+  font-size: 1.563rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+small,
+.small {
+  font-size: 0.8rem;
+}
+
+/** Global styles **/
+a,
+.link {
+  text-decoration: underline;
+  color: var(--text);
+  transition: color var(--speed) var(--ease);
+  &:hover {
+    color: var(--accent);
+  }
+}
+
+:where(button.link) {
+  border: 0px;
+  font-size: inherit;
+  background: transparent;
+  padding: 0px;
+  display: inline-block;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+.button {
+  display: inline-flex;
+  font-size: inherit;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  color: var(--text);
+  padding: 2px;
+  transition:
+    border-color var(--ease) var(--speed),
+    color var(--ease) var(--speed);
+}
+
+.button:hover,
+.button:focus {
+  color: var(--primary);
+  border-color: currentColor;
+}
+
+.button:active,
+.button.active {
+  color: var(--accent);
+}
+
+.button > svg {
+  line-height: unset;
+  height: 100%;
+  width: auto;
+}
+
+ul {
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0px;
+}
+
+@media (--mq-small) {
+  :root {
+    --header-height: 3rem;
+  }
+  .button {
+    padding: 0.25em;
+  }
+}
+
+@media (--mq-large) {
+  :root {
+    --header-height: 4rem;
+  }
+  .button {
+    padding: 0.5em;
+  }
+}
