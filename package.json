@@ -12,6 +12,7 @@
     "lint:strict": "eslint --max-warnings 0 .",
     "dev": "astro dev",
     "typecheck": "astro check && tsc --noEmit",
+    "build:types": "astro sync",
     "build": "astro build"
   },
   "nano-staged": {

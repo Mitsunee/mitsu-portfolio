@@ -10,7 +10,7 @@ Repository for https://www.mitsunee.com
 
 This project uses [Astro] with [Preact] for interactive components.
 
-Make sure you have [node.js] (version 16 or higher) and [pnpm] (version 8) installed. Install all dependencies and start the Development server:
+Make sure you have [node.js] (version 18 or higher) and [pnpm] (version 8) installed. Install all dependencies and start the Development server:
 
 ```shell
 pnpm install
@@ -41,6 +41,7 @@ pnpm lint:fix # standard lint check on entire codebase with autofix enabled
 pnpm lint:strict # strict lint check on entire codebase
 pnpm dev # start dev server
 pnpm typecheck # run typechecks on entire codebase
+pnpm build:types # generates content/data collection types
 pnpm build # create production build
 ```
 
@@ -53,6 +54,8 @@ Simply run the build script:
 ```shell
 pnpm build
 ```
+
+To test a production build locally either use `pnpm astro preview` or [binserve](https://github.com/mufeedvh/binserve) with the provided configuration.
 
 [astro]: https://docs.astro.build/en/getting-started/
 [preact]: https://preactjs.com/guide/v10/getting-started

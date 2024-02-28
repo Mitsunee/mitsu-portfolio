@@ -71,5 +71,5 @@ module.exports = {
       }
     }
   ],
-  ignorePatterns: ["dist"]
+  ignorePatterns: ["dist", "src/env.d.ts", ".astro"]
 };
