@@ -5,11 +5,12 @@ import {
   Github as IconGitHub,
   GitlabFull as IconGitlab,
   Internet as IconInternet,
+  Mastodon as IconMastodon,
   Youtube as IconYouTube
 } from "iconoir-react";
 import ocBig from "~/assets/mitsu_oc_big.png";
 import ocSmall from "~/assets/mitsu_oc_small.png";
-import { IconMastodon } from "~/components/IconMastodon";
+import { IconCodeberg } from "~/components/IconCodeberg";
 import { IconPronounsPage } from "~/components/IconPronounsPage";
 import { IconSteam } from "~/components/IconSteam";
 import HeroSection from "~/components/landing/HeroSection.astro";
@@ -55,6 +56,13 @@ import Page from "~/layouts/Page.astro";
           href="https://gitlab.com/mitsunee"
           icon={IconGitlab}
           aria-label="Gitlab"
+          style={{ "--primary": "#FC6D26" }}
+        />
+        <SocialsItem
+          href="https://codeberg.org/Mitsunee"
+          icon={IconCodeberg}
+          aria-label="Codeberg"
+          style={{ "--primary": "#2185D0" }}
         />
         <SocialsItem
           href="https://youtube.com/@mitsunee_"

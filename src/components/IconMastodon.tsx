@@ -1,5 +1,8 @@
 import type { HTMLProps } from "~/types/HTMLProps";
 
+/**
+ * @deprecated use Mastodon from iconoir-react instead
+ */
 export function IconMastodon(props: HTMLProps<"svg">) {
   return (
     <svg
