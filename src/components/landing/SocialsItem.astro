@@ -10,10 +10,10 @@ interface Props extends HTMLAttributes<"a"> {
   icon: SvgComponent;
   href: string;
   "aria-label": string;
-  target?: "_blank";
+  hover?: string;
 }
 
-const { icon: IconComponent, rel, ...aProps } = Astro.props;
+const { icon: IconComponent, rel, hover, ...aProps } = Astro.props;
 const relNormalized = Array.from(
   new Set(["noopener", "noreferrer", ...(rel?.split(" ") || [])])
 ).join(" ");
@@ -25,9 +25,10 @@ const relNormalized = Array.from(
   </a>
 </li>
 
-<style>
+<style define:vars={{ primary: hover }}>
   li:hover {
     transform: scale(var(--hover-scale));
     transition: transform var(--speed) var(--ease);
+    color: var(--primary);
   }
 </style>
