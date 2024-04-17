@@ -6,10 +6,31 @@ import "@fontsource/atkinson-hyperlegible/700-italic.css";
 import "@fontsource/lexend/700.css";
 import "~/styles/theme.css";
 import "~/styles/app.css";
+import { getImage } from "astro:assets";
 import type { PageMeta } from "~/types/meta";
+import { IMAGE_SIZES } from "~/types/sizes";
 
 type Props = PageMeta;
-const pageIcon = `${Astro.url.origin}/assets/icons/icon-192.png`;
+
+async function handleMetaImage(image: PageMeta["image"]) {
+  switch (typeof image) {
+    case "string":
+      return `${image.startsWith("/") ? "" : "/"}${image}`;
+    case "object": {
+      const img = await getImage({
+        src: image,
+        width: Math.min(IMAGE_SIZES.Meta, image.width),
+        quality: 92
+      });
+      return img.src;
+    }
+    default:
+      return "/assets/icons/icon-192.png";
+  }
+}
+
+const metaImage = await handleMetaImage(Astro.props.image);
+const pageIcon = `${Astro.url.origin}${metaImage}`;
 ---
 
 <html lang="en">
@@ -32,6 +53,11 @@ const pageIcon = `${Astro.url.origin}/assets/icons/icon-192.png`;
     <meta name="twitter:description" content={Astro.props.description} />
     <meta property="og:image" content={pageIcon} />
     <meta name="twitter:image" content={pageIcon} />
+    {
+      Astro.props.image && Astro.props.imageLarge && (
+        <meta name="twitter:card" content="summary_large_image" />
+      )
+    }
     <meta name="twitter:author" content="@Mitsunee" />
     <meta name="theme-color" content="#ffbb5c" />
     <script>
