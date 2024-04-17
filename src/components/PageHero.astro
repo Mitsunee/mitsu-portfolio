@@ -1,0 +1,73 @@
+---
+import type { ImageMetadata } from "astro";
+import { getImage } from "astro:assets";
+
+type DirectionX = "left" | "right" | "center";
+type DirectionY = "top" | "center" | "bottom";
+
+interface Props {
+  background: ImageMetadata;
+  title: string;
+  bgAlign?: `${DirectionY} ${DirectionX}` | "center";
+}
+
+const bgImage = await getImage({
+  src: Astro.props.background,
+  quality: 92,
+  width: 1480,
+  format: "jpeg"
+});
+
+const bgImageUrl = `url("${bgImage.src}")`;
+---
+
+<header>
+  <div class="hero-bg" style={`--bg: ${bgImageUrl}`}></div>
+  <h1>{Astro.props.title}</h1>
+</header>
+
+<style define:vars={{ pos: Astro.props.bgAlign }}>
+  header {
+    position: relative;
+    overflow: hidden;
+    max-width: var(--content-width);
+    margin: 1rem auto 1.5rem;
+    border-radius: var(--radius-large);
+    box-shadow:
+      1px 1px 6px var(--shadow),
+      inset 1px 1px 6px var(--secondary);
+    border: 1px solid var(--secondary);
+
+    &:hover > .hero-bg {
+      transform: scale(var(--hover-scale));
+    }
+  }
+
+  h1 {
+    margin: 0.5em;
+    text-shadow: 3px 3px 6px var(--shadow);
+    color: var(--white);
+    font-size: 1.563rem;
+
+    @media (--mq-small) {
+      margin: 1em;
+    }
+
+    @media (--mq-medium) {
+      margin-top: 2.5em;
+      font-size: 3.053rem;
+    }
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0px;
+    z-index: -1;
+    background-image: var(--bg);
+    background-position: var(--pos, center);
+    background-size: cover;
+    transform: scale(1);
+    transform-origin: var(--pos, center);
+    transition: transform var(--ease) var(--speed);
+  }
+</style>

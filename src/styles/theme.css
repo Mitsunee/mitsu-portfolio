@@ -18,14 +18,15 @@
   --FALSE: ;
 
   /** Color Themes **/
-  --text: var(--theme-light, #100405) var(--theme-dark, #fbeff0);
-  --background: var(--theme-light, #f3ecec) var(--theme-dark, #130c0c);
+  --white: var(--theme-light, #f3ecec) var(--theme-dark, #fbeff0);
+  --black: var(--theme-light, #100405) var(--theme-dark, #130c0c);
+  --text: var(--theme-light, var(--black)) var(--theme-dark, var(--white));
+  --background: var(--theme-light, var(--white)) var(--theme-dark, var(--black));
   --primary: #ffbb5c;
   --secondary: var(--theme-light, #dad7db) var(--theme-dark, #272428);
   --highlight: var(--theme-light, #afa9b1) var(--theme-dark, #544e56);
   --accent: var(--theme-light, #ad1f4e) var(--theme-dark, #e05281);
   --shadow: var(--theme-light, #10040546) var(--theme-dark, #130c0c8f);
-  --black: var(--theme-light, #100405) var(--theme-dark, #130c0c);
 }
 
 /** set booleans for themes **/
