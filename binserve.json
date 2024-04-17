@@ -9,7 +9,7 @@
     }
   },
   "routes": {
-    "/": "public/"
+    "/": "dist/"
   },
   "config": {
     "enable_hot_reload": false,
