@@ -5,18 +5,17 @@ type Props = {
 };
 ---
 
-<section
-  class:list={["section", { bg: Astro.props.background }, Astro.props.class]}>
+<section class:list={[{ bg: Astro.props.background }, Astro.props.class]}>
   <slot />
 </section>
 
 <style>
-  .section {
+  section {
     width: var(--content-width);
     margin: 1rem auto;
   }
 
-  .section.bg {
+  section.bg {
     background-color: var(--secondary);
     border-radius: var(--radius-large);
     padding: 1rem;

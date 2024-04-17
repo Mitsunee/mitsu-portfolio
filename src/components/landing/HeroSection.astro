@@ -7,7 +7,7 @@
   <slot />
 </section>
 
-<style is:global>
+<style>
   #hero {
     width: var(--content-width);
     margin: auto;
@@ -16,7 +16,7 @@
     place-content: center;
     gap: 0.5rem;
 
-    & > div {
+    & > :global(div) {
       padding: 0.5rem;
       text-align: center;
       & p {
@@ -24,7 +24,7 @@
       }
     }
 
-    & h1 {
+    & :global(h1) {
       margin: 1.5rem 0px;
       width: 100%;
       text-shadow: 2px 2px 4px var(--accent);
@@ -34,7 +34,7 @@
   @media (--mq-medium) {
     #hero {
       flex-flow: row nowrap;
-      & > div {
+      & > :global(div) {
         padding: 1rem;
       }
     }
