@@ -1,12 +1,104 @@
 ---
+import {
+  CodeBracketsSquare as IconCode,
+  Internet as IconInternet
+} from "iconoir-react";
 import heroImg from "~/assets/backgrounds/pexels-tima-miroshnichenko-5380594.jpg";
+import metaImg from "~/assets/meta/projects.png";
+import ProjectsItem from "~/components/landing/ProjectsItem.astro";
+import ProjectsSection from "~/components/landing/ProjectsSection.astro";
 import PageHero from "~/components/PageHero.astro";
+import Section from "~/components/Section.astro";
 import Page from "~/layouts/Page.astro";
 ---
 
 <Page
-  title="Projects"
+  title="My Projects"
   description="Showcases of my current and past projects"
-  image={heroImg}>
-  <PageHero background={heroImg} title="Projects" bgAlign="bottom right" />
+  image={metaImg}>
+  <PageHero background={heroImg} title="My Projects" bgAlign="bottom right" />
+  <ProjectsSection>
+    <ProjectsItem
+      title="Mitsunee | Blog"
+      icon={IconInternet}
+      href="https://blog.mitsunee.com">
+      <p>
+        My personal blog where I post guides and rants about my hobbies, Linux,
+        tech, coding and games.
+      </p>
+    </ProjectsItem>
+    <ProjectsItem
+      title="Foxkit"
+      icon={IconCode}
+      href="https://github.com/foxkit-js">
+      <p>
+        Collection of Configs and modules to reduce copypasting between my
+        projects as well as providing known good versions of common modules.
+      </p>
+    </ProjectsItem>
+    <ProjectsItem
+      title="Pokemon Gen3 Damage Calculator"
+      icon={IconInternet}
+      href="https://www.mitsunee.com/gen3dmgcalc"
+      class="pkmn">
+      <p>
+        Damage calculator for the third generation of Pokémon games for GBA
+        (R/S/E, FR/LG) and Gamecube (Colosseum/XD).
+      </p>
+    </ProjectsItem>
+  </ProjectsSection>
+  <Section>
+    <h2>Past Projects</h2>
+    <p>
+      This is a small selection of my larger discontinued personal projects.
+    </p>
+    <h3>FGO Timers</h3>
+    <p>
+      Fansite for the game Fate/Grand Order. Was mostly popular for the timers
+      for game events, missions and campaigns with full support for timezone
+      conversion, but also had plenty of other game information and tools such
+      as the AP Calculator.
+    </p>
+    <p>
+      Written in Next.js/React (although an early jQuery version also existed),
+      made possible by the <a href="https://atlasacademy.io"
+        >Atlas Academy API</a
+      > fan project. Discontinued in 2023.
+    </p>
+    <h3>Bandori Checker</h3>
+    <p>
+      Checklist for tracking Full Combo and All Perfect clears in the rhyhtm
+      game BanGDream Girls Band Party (aka Bandori). This webapp was written
+      before the game had any ingame filters for finding which songs hadn't been
+      cleared with a Full Combo.
+    </p>
+    <p>
+      Written in PHP/jQuery. Discontinued when the game itself got proper
+      filters.
+    </p>
+    <h3>Popout Maker</h3>
+    <p>
+      Webapp for opening web pages in smaller popup windows, with special
+      support for Twitch and YouTube.
+    </p>
+    <p>
+      Written in PHP/jQuery. Discontinued because Twitch and YouTube kept
+      breaking the ways I supported their embeds.
+    </p>
+    <h3>Nekoreminder</h3>
+    <p>
+      Countdown Timer webapp written in jQuery with focus on accuracy. Was also
+      available as an electron app for a short time to work around problems with
+      browsers freezing inactive tabs.
+    </p>
+  </Section>
 </Page>
+
+<style is:global>
+  li.pkmn {
+    background-image: url(/assets/bgpkmn.jpg);
+    background-size: cover;
+    color: var(--black);
+    --primary: #00b0f0;
+  }
+</style>
