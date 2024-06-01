@@ -76,8 +76,8 @@ importers:
         specifier: ^8.57.0
         version: 8.57.0
       eslint-config-foxkit:
-        specifier: ^3.0.4
-        version: 3.0.4(@typescript-eslint/eslint-plugin@7.11.0(@typescript-eslint/parser@7.11.0(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)(typescript@5.4.5))(@typescript-eslint/parser@7.11.0(eslint@8.57.0)(typescript@5.4.5))(eslint-plugin-jsx-a11y@6.8.0(eslint@8.57.0))(eslint-plugin-no-await-in-promise@2.0.1(eslint@8.57.0))(eslint-plugin-react-hooks@4.6.2(eslint@8.57.0))(eslint-plugin-react@7.34.2(eslint@8.57.0))(eslint@8.57.0)
+        specifier: ^3.1.0
+        version: 3.1.0(@typescript-eslint/eslint-plugin@7.11.0(@typescript-eslint/parser@7.11.0(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)(typescript@5.4.5))(@typescript-eslint/parser@7.11.0(eslint@8.57.0)(typescript@5.4.5))(eslint-plugin-jsx-a11y@6.8.0(eslint@8.57.0))(eslint-plugin-no-await-in-promise@2.0.1(eslint@8.57.0))(eslint-plugin-react-hooks@4.6.2(eslint@8.57.0))(eslint-plugin-react@7.34.2(eslint@8.57.0))(eslint@8.57.0)
       eslint-config-prettier:
         specifier: ^9.1.0
         version: 9.1.0(eslint@8.57.0)
@@ -1821,8 +1821,8 @@ packages:
     peerDependencies:
       eslint: '>=6.0.0'
 
-  eslint-config-foxkit@3.0.4:
-    resolution: {integrity: sha512-XYp1wbh6t4eKFwk7RS0BsvIDdFyVzSA3PO4CNzImssIT52Gx+t3mTDUybLoZqA1o3Tmnc+36cJDlVUePve1YWQ==}
+  eslint-config-foxkit@3.1.0:
+    resolution: {integrity: sha512-1m2kXay5awXA+zph090DyOc/mvBznxhO+Co5yu88dG4Q9iG2zZdboU0Io79dKloTBkAYJZaC3qWkh5jm+wjQJg==}
     engines: {node: '>=16'}
     peerDependencies:
       '@typescript-eslint/eslint-plugin': '>=6.0.0'
@@ -5679,12 +5679,12 @@ snapshots:
       eslint: 8.57.0
       semver: 7.6.2
 
-  eslint-config-foxkit@3.0.4(@typescript-eslint/eslint-plugin@7.11.0(@typescript-eslint/parser@7.11.0(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)(typescript@5.4.5))(@typescript-eslint/parser@7.11.0(eslint@8.57.0)(typescript@5.4.5))(eslint-plugin-jsx-a11y@6.8.0(eslint@8.57.0))(eslint-plugin-no-await-in-promise@2.0.1(eslint@8.57.0))(eslint-plugin-react-hooks@4.6.2(eslint@8.57.0))(eslint-plugin-react@7.34.2(eslint@8.57.0))(eslint@8.57.0):
+  eslint-config-foxkit@3.1.0(@typescript-eslint/eslint-plugin@7.11.0(@typescript-eslint/parser@7.11.0(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)(typescript@5.4.5))(@typescript-eslint/parser@7.11.0(eslint@8.57.0)(typescript@5.4.5))(eslint-plugin-jsx-a11y@6.8.0(eslint@8.57.0))(eslint-plugin-no-await-in-promise@2.0.1(eslint@8.57.0))(eslint-plugin-react-hooks@4.6.2(eslint@8.57.0))(eslint-plugin-react@7.34.2(eslint@8.57.0))(eslint@8.57.0):
     dependencies:
       '@eslint/js': 8.57.0
       eslint: 8.57.0
       eslint-plugin-no-await-in-promise: 2.0.1(eslint@8.57.0)
-      globals: 13.24.0
+      globals: 15.3.0
     optionalDependencies:
       '@typescript-eslint/eslint-plugin': 7.11.0(@typescript-eslint/parser@7.11.0(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)(typescript@5.4.5)
       '@typescript-eslint/parser': 7.11.0(eslint@8.57.0)(typescript@5.4.5)
