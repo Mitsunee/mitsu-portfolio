@@ -37,7 +37,6 @@
     "@fontsource/lexend": "^5.0.19",
     "@foxkit/node-util": "^0.6.0",
     "@nanostores/preact": "^0.5.1",
-    "@types/node": "^18.19.31",
     "astro": "^4.6.2",
     "classcat": "^5.0.5",
     "iconoir-react": "^7.6.0",
@@ -52,6 +51,7 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.5.10",
+    "@types/node": "^20",
     "@typescript-eslint/eslint-plugin": "^7.7.0",
     "@typescript-eslint/parser": "^7.7.0",
     "eslint": "^8.57.0",
